@@ -1,0 +1,17 @@
+
+fesom.x:251048 terminated with signal 11 at PC=2aab11044f19 SP=2aaba4e02408.  Backtrace:
+/lib64/libpsm2.so.2(+0x48f19)[0x2aab11044f19]
+/lib64/libpsm2.so.2(+0x2d02a)[0x2aab1102902a]
+/lib64/libpsm2.so.2(+0x3f299)[0x2aab1103b299]
+/lib64/libpsm2.so.2(psm2_mq_isend2+0x6c)[0x2aab1101a6ac]
+/usr/lib64/libfabric/libpsmx2-fi.so(+0x1617e)[0x2aab11d3c17e]
+/sw/comm/impi/compilers_and_libraries_2018.6.288/linux/mpi/intel64/lib/release_mt/libmpi.so.12(+0x3eeea2)[0x2aaab3f91ea2]
+/sw/comm/impi/compilers_and_libraries_2018.6.288/linux/mpi/intel64/lib/release_mt/libmpi.so.12(+0x37bc2d)[0x2aaab3f1ec2d]
+/sw/comm/impi/compilers_and_libraries_2018.6.288/linux/mpi/intel64/lib/release_mt/libmpi.so.12(PMPI_Send+0x528)[0x2aaab40125f8]
+/sw/comm/impi/compilers_and_libraries_2018.6.288/linux/mpi/intel64/lib/libmpifort.so.12(mpi_send+0x23)[0x2aaab3929ee3]
+/home/hbkfheuk/fesom2/Arc01/work/./fesom.x[0x5319af]
+/home/hbkfheuk/fesom2/Arc01/work/./fesom.x[0x54b18d]
+/home/hbkfheuk/fesom2/Arc01/work/./fesom.x[0x40ed1c]
+/lib64/libstdc++.so.6(+0xb5330)[0x2aaab336a330]
+/lib64/libpthread.so.0(+0x7ea5)[0x2aaab4a41ea5]
+/lib64/libc.so.6(clone+0x6d)[0x2aaab4d549fd]
