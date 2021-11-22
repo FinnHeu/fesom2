@@ -28,7 +28,7 @@ landice_end_mon=10
 &nam_sbc
    nm_xwind_file = '/scratch/projects/hbk00087/hbkfheuk/forcing/combined_CORE/CTRL/u_10.'        ! name of file with winds, if nm_sbc=2
    nm_ywind_file = '/scratch/projects/hbk00087/hbkfheuk/forcing/combined_CORE/CTRL/v_10.'        ! name of file with winds, if nm_sbc=2
-   nm_humi_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/combined_CORE/CTRL/q_q0.'        ! name of file with humidity
+   nm_humi_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/combined_CORE/CTRL/q_10.'        ! name of file with humidity
    nm_qsr_file   = '/scratch/projects/hbk00087/hbkfheuk/forcing/combined_CORE/CTRL/ncar_rad.'    ! name of file with solar heat
    nm_qlw_file   = '/scratch/projects/hbk00087/hbkfheuk/forcing/combined_CORE/CTRL/ncar_rad.'    ! name of file with Long wave
    nm_tair_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/combined_CORE/CTRL/t_10.'        ! name of file with 2m air temperature
