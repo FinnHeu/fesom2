@@ -28,6 +28,8 @@ ulimit -s unlimited
 # determine JOBID
 JOBID=`echo $SLURM_JOB_ID |cut -d"." -f1`
 
+rm namelist.*
+
 ln -s ../../bin/fesom.x .           # cp -n ../bin/fesom.x
 cp -n ../config/namelist.config  .
 cp -n ../config/namelist.forcing .
