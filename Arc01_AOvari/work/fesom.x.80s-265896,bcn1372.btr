@@ -1,0 +1,11 @@
+
+fesom.x:265896 terminated with signal 11 at PC=2aab11044f19 SP=2aab15bd2518.  Backtrace:
+/lib64/libpsm2.so.2(+0x48f19)[0x2aab11044f19]
+/lib64/libpsm2.so.2(+0x2cfda)[0x2aab11028fda]
+/lib64/libpsm2.so.2(+0x32073)[0x2aab1102e073]
+/lib64/libpsm2.so.2(+0x2b25e)[0x2aab1102725e]
+/lib64/libpsm2.so.2(+0x28084)[0x2aab11024084]
+/lib64/libpsm2.so.2(+0x25f3f)[0x2aab11021f3f]
+/lib64/libpsm2.so.2(+0x298a0)[0x2aab110258a0]
+/lib64/libpthread.so.0(+0x7ea5)[0x2aaab4a41ea5]
+/lib64/libc.so.6(clone+0x6d)[0x2aaab4d549fd]
