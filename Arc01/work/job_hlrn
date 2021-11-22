@@ -6,7 +6,7 @@
 #SBATCH --time=12:00:00
 #SBATCH -o slurm-out.out
 #SBATCH -e slurm-err.out
-#SBATCH --account=hbk00087 
+#SBATCH --account=hbk00087
 
 ## modules HLRN
 module purge
@@ -14,7 +14,7 @@ module load slurm
 module load HLRNenv
 module load sw.skl
 module load cmake
-module load cdo nco 
+module load cdo nco
 #module load intel/19.0.5
 #module load impi/2019.5
 module load intel/18.0.6
@@ -51,17 +51,17 @@ date
 
 # exit after 2017
 
-#Resultpath='/scratch/projects/hbk00083/model_outputs/fesom2.1_recom/SPINUP_7'
-#test -e $Resultpath/fesom.1903.oce.restart.nc && exit
+Resultpath='/scratch/projects/hbk00087/hbkfheuk/result/ctrl/'
+test -e $Resultpath/fesom.2010.oce.restart.nc && exit
 
-#IsInFile=$( tail -1 fesom2.0.out | grep -c should)
-#if (( IsInFile > 0 )); then
- # submit next #job                                                                                                                                                                                            
-# echo "submitting next job"
-# cp fesom2.0.out fesom.out.done 
-# sbatch job_hlrn
-#else
-# echo "something is wrong, last line of fesom.out reads"
-# echo $( tail -1 fesom2.0.out)
-# echo "abnormal termination of job script"
+IsInFile=$( tail -1 fesom2.0.out | grep -c should)
+if (( IsInFile > 0 )); then
+ # submit next #job
+ echo "submitting next job"
+ cp fesom2.0.out fesom.out.done
+ sbatch job_hlrn
+else
+ echo "something is wrong, last line of fesom.out reads"
+ echo $( tail -1 fesom2.0.out)
+ echo "abnormal termination of job script"
 #fi
