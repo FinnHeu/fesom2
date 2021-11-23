@@ -60,8 +60,6 @@ io_list =  'sst       ',1, 'm', 4,
            'slope_x   ',1, 'm', 4,
            'slope_y   ',1, 'm', 4,
            'slope_z   ',1, 'm', 4,
-           'alpha     ',1, 'm', 8,
-           'beta      ',1, 'm', 8,
 
 
 /
