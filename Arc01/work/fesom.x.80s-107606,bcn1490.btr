@@ -1,0 +1,17 @@
+
+fesom.x:107606 terminated with signal 6 at PC=2aaab4c8c387 SP=7fffffff2948.  Backtrace:
+/lib64/libc.so.6(gsignal+0x37)[0x2aaab4c8c387]
+/lib64/libc.so.6(abort+0x148)[0x2aaab4c8da78]
+/lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x165)[0x2aaab3315a95]
+/lib64/libstdc++.so.6(+0x5ea06)[0x2aaab3313a06]
+/lib64/libstdc++.so.6(+0x5ea33)[0x2aaab3313a33]
+/lib64/libstdc++.so.6(+0x5ec53)[0x2aaab3313c53]
+/lib64/libstdc++.so.6(_ZSt20__throw_system_errori+0x90)[0x2aaab3368f30]
+/lib64/libstdc++.so.6(_ZNSt6thread15_M_start_threadESt10shared_ptrINS_10_Impl_baseEE+0x279)[0x2aaab336a669]
+/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x63e11f]
+/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x40ea65]
+/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x53a60a]
+/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x4628c1]
+/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x40ea1e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x40e929]
