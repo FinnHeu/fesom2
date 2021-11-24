@@ -1,0 +1,10 @@
+# The fortran modules provided by this target.
+provides
+ com_global2local_interface.mod
+ g_config.mod
+ g_parsup.mod
+ g_rotate_grid.mod
+ mod_mesh.mod
+ o_arrays.mod
+ o_mesh.mod
+ o_param.mod

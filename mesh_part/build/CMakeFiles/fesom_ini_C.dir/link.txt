@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfesom_ini_C.a  CMakeFiles/fesom_ini_C.dir/home/hbkfheuk/fesom2_fork/fesom2/src/fort_part.c.o
+/usr/bin/ranlib libfesom_ini_C.a
