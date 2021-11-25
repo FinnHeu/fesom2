@@ -8,9 +8,9 @@ Module for nco 4.9.1 loaded.
 Module for Intel Parallel Studio XE Composer Edition (version 2018 Update 5) loaded.
 Module for Intel-MPI (version 2018.5) loaded.
 + ulimit -s unlimited
-++ echo 6285945
+++ echo 6286244
 ++ cut -d. -f1
-+ JOBID=6285945
++ JOBID=6286244
 + rm namelist.config namelist.cvmix namelist.forcing namelist.ice namelist.icepack namelist.io namelist.oce
 + ln -s ../../bin/fesom.x .
 ln: failed to create symbolic link ‘./fesom.x’: File exists
@@ -23,78 +23,10 @@ ln: failed to create symbolic link ‘./fesom.x’: File exists
 + cp -n ../config/namelist.icepack .
 + date
 + srun --mpi=pmi2 ./fesom.x
-1
-srun: error: bcn1308: task 866: Exited with exit code 1
-srun: launch/slurm: _step_signal: Terminating StepId=6285945.0
-slurmstepd: error: *** STEP 6285945.0 ON bcn1290 CANCELLED AT 2021-11-24T14:24:04 ***
-
-fesom.x:253759 terminated with signal 11 at PC=2aaab5cc849d SP=7fffffff2108.  Backtrace:
-
-fesom.x:255829 terminated with signal 11 at PC=2aaab5cc849d SP=7fffffff2108.  Backtrace:
-/home/shkifmsw/sw/HPC_libraries/intel2019.0.5_impi2019.5_20200811/lib/libhdf5.so.103(H5G_rootof+0x3d)[0x2aaab5cc849d]
-/home/shkifmsw/sw/HPC_libraries/intel2019.0.5_impi2019.5_20200811/lib/libhdf5.so.103(H5G_root_loc+0x37)[0x2aaab5cc82e7]
-/home/shkifmsw/sw/HPC_libraries/intel2019.0.5_impi2019.5_20200811/lib/libhdf5.so.103(H5G_loc+0x311)[0x2aaab5cbd0a1]
-/home/shkifmsw/sw/HPC_libraries/intel2019.0.5_impi2019.5_20200811/lib/libhdf5.so.103(H5Iget_name+0x65)[0x2aaab5cff8c5]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(reportobject+0x22)[0x2aaaab1f71f2]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(reportopenobjects+0xb8)[0x2aaaab1f7438]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(nc4_close_netcdf4_file+0x150)[0x2aaaab1f9070]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(nc4_close_hdf5_file+0xfc)[0x2aaaab1f8dbc]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(NC4_open+0x141)[0x2aaaab1fe891]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(NC_open+0x207)[0x2aaaab1797d7]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(nc_open+0x17)[0x2aaaab1795c7]
-/home/shkifmsw/sw/HPC_libraries/intel2019.0.5_impi2019.5_20200811/lib/libnetcdff.so.6(nf_open_+0xa6)[0x2aaaaace1176]
-/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x537dec]
-/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x4615c1]
-/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x40d75e]
-/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
-/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x40d669]
-/home/shkifmsw/sw/HPC_libraries/intel2019.0.5_impi2019.5_20200811/lib/libhdf5.so.103(H5G_rootof+0x3d)[0x2aaab5cc849d]
-/home/shkifmsw/sw/HPC_libraries/intel2019.0.5_impi2019.5_20200811/lib/libhdf5.so.103(H5G_root_loc+0x37)[0x2aaab5cc82e7]
-/home/shkifmsw/sw/HPC_libraries/intel2019.0.5_impi2019.5_20200811/lib/libhdf5.so.103(H5G_loc+0x311)[0x2aaab5cbd0a1]
-/home/shkifmsw/sw/HPC_libraries/intel2019.0.5_impi2019.5_20200811/lib/libhdf5.so.103(H5Iget_name+0x65)[0x2aaab5cff8c5]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(reportobject+0x22)[0x2aaaab1f71f2]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(reportopenobjects+0xb8)[0x2aaaab1f7438]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(nc4_close_netcdf4_file+0x150)[0x2aaaab1f9070]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(nc4_close_hdf5_file+0xfc)[0x2aaaab1f8dbc]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(NC4_open+0x141)[0x2aaaab1fe891]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(NC_open+0x207)[0x2aaaab1797d7]
-/sw/dataformats/netcdf/intel.18/4.7.3/skl/lib/libnetcdf.so.15(nc_open+0x17)[0x2aaaab1795c7]
-/home/shkifmsw/sw/HPC_libraries/intel2019.0.5_impi2019.5_20200811/lib/libnetcdff.so.6(nf_open_+0xa6)[0x2aaaaace1176]
-/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x537dec]
-/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x4615c1]
-/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x40d75e]
-/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
-/home/hbkfheuk/fesom2_fork/fesom2/Arc01/work/./fesom.x[0x40d669]
-srun: error: bcn1328: tasks 1824-1919: Exited with exit code 1
-srun: error: bcn1324: tasks 1632,1634-1727: Exited with exit code 1
-srun: error: bcn1314: tasks 1152-1247: Exited with exit code 1
-srun: error: bcn1320: tasks 1440-1535: Exited with exit code 1
-srun: error: bcn1332: tasks 2016-2111: Exited with exit code 1
-srun: error: bcn1300: tasks 480-575: Exited with exit code 1
-srun: error: bcn1312: tasks 1056-1151: Exited with exit code 1
-srun: error: bcn1334: tasks 2112-2207: Exited with exit code 1
-srun: error: bcn1292: tasks 96-191: Exited with exit code 1
-srun: error: bcn1336: tasks 2208-2303: Exited with exit code 1
-srun: error: bcn1310: tasks 960-1055: Exited with exit code 1
-srun: error: bcn1326: tasks 1728-1823: Exited with exit code 1
-srun: error: bcn1322: tasks 1536-1631: Exited with exit code 1
-srun: error: bcn1306: tasks 768-863: Exited with exit code 1
-srun: error: bcn1318: tasks 1344-1439: Exited with exit code 1
-srun: error: bcn1294: tasks 192-287: Exited with exit code 1
-srun: error: bcn1298: tasks 384-479: Exited with exit code 1
-srun: error: bcn1304: tasks 672-767: Exited with exit code 1
-srun: error: bcn1316: tasks 1248-1343: Exited with exit code 1
-srun: error: bcn1296: tasks 288-383: Exited with exit code 1
-srun: error: bcn1302: tasks 576-671: Exited with exit code 1
-srun: error: bcn1330: tasks 1920-2015: Exited with exit code 1
-srun: error: bcn1308: tasks 864-865,867-959: Exited with exit code 1
-srun: error: bcn1290: tasks 0-95: Exited with exit code 1
-srun: error: bcn1324: task 1633: Killed
-srun: Force Terminated StepId=6285945.0
 + date
 + Resultpath=/scratch/projects/hbk00087/hbkfheuk/result/ctrl/
 + test -e /scratch/projects/hbk00087/hbkfheuk/result/ctrl//fesom.2010.oce.restart.nc
 ++ tail -1 fesom2.0.out
 ++ grep -c should
-+ IsInFile=0
-/cm/local/apps/slurm/var/spool/job6285945/slurm_script: line 70: syntax error: unexpected end of file
++ IsInFile=1
+/cm/local/apps/slurm/var/spool/job6286244/slurm_script: line 70: syntax error: unexpected end of file
