@@ -53,7 +53,7 @@ date
 
 # exit after 2017
 
-Resultpath='/scratch/projects/hbk00087/hbkfheuk/result/ctrl/'
+Resultpath='/scratch/projects/hbk00087/hbkfheuk/results/ctrl/'
 test -e $Resultpath/fesom.2010.oce.restart.nc && exit
 
 IsInFile=$( tail -1 fesom2.0.out | grep -c should)
