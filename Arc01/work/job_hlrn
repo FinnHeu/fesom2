@@ -66,4 +66,4 @@ else
  echo "something is wrong, last line of fesom.out reads"
  echo $( tail -1 fesom2.0.out)
  echo "abnormal termination of job script"
-#fi
+fi
