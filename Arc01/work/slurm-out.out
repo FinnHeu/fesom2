@@ -1,10 +1,10 @@
-Wed Nov 24 16:02:29 CET 2021
-Thu Nov 25 00:46:01 CET 2021
+Thu Nov 25 09:30:04 CET 2021
+Thu Nov 25 18:04:10 CET 2021
 ============ Job Information ===================================================
-Submitted: 2021-11-24T16:02:22
-Started: 2021-11-24T16:02:25
-Ended: 2021-11-25T00:46:06
-Elapsed: 524 min, Limit: 720 min, Difference: 196 min
+Submitted: 2021-11-25T09:29:47
+Started: 2021-11-25T09:30:01
+Ended: 2021-11-25T18:04:10
+Elapsed: 515 min, Limit: 720 min, Difference: 205 min
 CPUs: 4608, Nodes: 24
-Estimated NPL: 2931.9376
+Estimated NPL: 2878.5594
 ================================================================================
