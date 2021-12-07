@@ -8,9 +8,9 @@ Module for nco 4.9.1 loaded.
 Module for Intel Parallel Studio XE Composer Edition (version 2018 Update 5) loaded.
 Module for Intel-MPI (version 2018.5) loaded.
 + ulimit -s unlimited
-++ echo 6286805
+++ echo 6294961
 ++ cut -d. -f1
-+ JOBID=6286805
++ JOBID=6294961
 + rm namelist.config namelist.cvmix namelist.forcing namelist.ice namelist.icepack namelist.io namelist.oce
 + ln -s ../../bin/fesom.x .
 ln: failed to create symbolic link ‘./fesom.x’: File exists
@@ -26,7 +26,4 @@ ln: failed to create symbolic link ‘./fesom.x’: File exists
 + date
 + Resultpath=/scratch/projects/hbk00087/hbkfheuk/results/ctrl/
 + test -e /scratch/projects/hbk00087/hbkfheuk/results/ctrl//fesom.2010.oce.restart.nc
-++ tail -1 fesom2.0.out
-++ grep -c should
-+ IsInFile=1
-/cm/local/apps/slurm/var/spool/job6286805/slurm_script: line 70: syntax error: unexpected end of file
++ exit
