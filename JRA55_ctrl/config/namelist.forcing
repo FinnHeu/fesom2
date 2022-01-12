@@ -26,15 +26,15 @@ landice_end_mon=10
 /
 
 &nam_sbc
-   nm_xwind_file = '/scratch/projects/hbk00087/hbkfheuk/forcing/uas.'        ! name of file with winds, if nm_sbc=2
-   nm_ywind_file = '/scratch/projects/hbk00087/hbkfheuk/forcing/vas.'        ! name of file with winds, if nm_sbc=2
-   nm_humi_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/huss.'        ! name of file with humidity
-   nm_qsr_file   = '/scratch/projects/hbk00087/hbkfheuk/forcing/rsds.'    ! name of file with solar heat
-   nm_qlw_file   = '/scratch/projects/hbk00087/hbkfheuk/forcing/rlds.'    ! name of file with Long wave
-   nm_tair_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/tas.'        ! name of file with 2m air temperature
-   nm_prec_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/prra.' ! name of file with total precipitation
-   nm_snow_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/prsn.' ! name of file with snow  precipitation
-   nm_mslp_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/psl.'         ! air_pressure_at_sea_level
+   nm_xwind_file = '/scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/uas.'        ! name of file with winds, if nm_sbc=2
+   nm_ywind_file = '/scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/vas.'        ! name of file with winds, if nm_sbc=2
+   nm_humi_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/huss.'        ! name of file with humidity
+   nm_qsr_file   = '/scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/rsds.'    ! name of file with solar heat
+   nm_qlw_file   = '/scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/rlds.'    ! name of file with Long wave
+   nm_tair_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/tas.'        ! name of file with 2m air temperature
+   nm_prec_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/prra.' ! name of file with total precipitation
+   nm_snow_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/prsn.' ! name of file with snow  precipitation
+   nm_mslp_file  = '/scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/psl.'         ! air_pressure_at_sea_level
    nm_xwind_var  = 'uas'   ! name of variable in file with wind
    nm_ywind_var  = 'vas'   ! name of variable in file with wind
    nm_humi_var   = 'huss'   ! name of variable in file with humidity
