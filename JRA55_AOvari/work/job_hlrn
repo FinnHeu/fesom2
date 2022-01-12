@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=fesom2.0_AOvari
+#SBATCH --job-name=AOvari
 #SBATCH --partition=standard96
 #SBATCH --ntasks=2304      ######2304
 #SBATCH --ntasks-per-node=96
@@ -51,8 +51,8 @@ date
 
 # exit after 2020
 
-Resultpath='/scratch/projects/hbk00087/hbkfheuk/results/projects/JRA55/JRA55_AOvari'
-test -e $Resultpath/fesom.2020.oce.restart.nc && exit
+Resultpath='/scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results/AOvari'
+test -e $Resultpath/fesom.2019.oce.restart.nc && exit
 
 IsInFile=$( tail -1 fesom2.0.out | grep -c should)
 if (( IsInFile > 0 )); then
