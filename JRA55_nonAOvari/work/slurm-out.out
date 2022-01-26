@@ -1,0 +1,12 @@
+Wed Jan 26 05:21:44 CET 2022
+Wed Jan 26 12:48:07 CET 2022
+submitting next job
+Submitted batch job 6368678
+============ Job Information ===================================================
+Submitted: 2022-01-26T05:21:36
+Started: 2022-01-26T05:21:41
+Ended: 2022-01-26T12:48:10
+Elapsed: 447 min, Limit: 720 min, Difference: 273 min
+CPUs: 4608, Nodes: 24
+Estimated NPL: 2499.7053
+================================================================================
