@@ -5349,3 +5349,1483 @@
      Oce. TOTAL       : 3.413E-02
  
  
+ FESOM =======================================================
+ FESOM step:      138240  day:         115  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.523E-03
+	Ice Advect.     : 7.911E-04
+	Ice Thermodyn.  : 5.910E-04
+    _______________________________
+	Ice TOTAL       : 7.905E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      138240
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  8.462262943658072E-016  8.462262943658072E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.69460614130058       0.951002631868480     
+ 	 max(hbar), max(hbar)     =  -1.69460614130058       0.951002631868480     
+ 
+ 	 int(deta), int(dhbar)    =  6.679145512210428E-014  2.667470642099496E-019
+ 	  --> error(deta-dhbar)   =  6.679118837504007E-014
+ 	  --> error(deta-wflux)   =  6.679145511827347E-014
+ 	  --> error(dhbar-wflux)  =  2.667432333984806E-019
+ 
+ 	 -int(wflux)*dt           = -1.149243440702333E-021
+ 	 int(deta )-int(wflux)*dt =  6.679145627134772E-014
+ 	 int(dhbar)-int(wflux)*dt =  2.678963076506520E-019
+ 
+ 	___global min/max/mean  --> mstep=      138240 ____________
+ 	       eta= -1.695E+00 |  9.510E-01 | N.A.
+ 	      deta= -3.272E-03 |  2.252E-03 | N.A.
+ 	      hbar= -1.695E+00 |  9.510E-01 | N.A.
+ 	     wflux= -3.468E-05 |  1.759E-06 |  3.831E-24
+ 	     hflux= -4.158E+02 |  1.166E+04 |  0.000E+00
+ 	      temp= -1.953E+00 |  3.189E+01 |  0.000E+00
+ 	      salt=  4.171E+00 |  3.890E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.930E-17 |  4.911E-17 | N.A.
+ 	 wvel(2,:)= -7.263E-04 |  9.896E-04 | N.A.
+ 	 uvel(1,:)= -1.211E+00 |  1.192E+00 | N.A.
+ 	 uvel(2,:)= -1.323E+00 |  1.199E+00 | N.A.
+ 	 vvel(1,:)= -9.698E-01 |  1.269E+00 | N.A.
+ 	 vvel(2,:)= -8.975E-01 |  1.228E+00 | N.A.
+ 	hnode(1,:)=  9.596E+00 |  1.026E+01 | N.A.
+ 	hnode(2,:)=  9.596E+00 |  1.026E+01 | N.A.
+ 	     cfl_z=  N.A.      |  4.086E-01 | N.A.
+ 	     pgf_x=  N.A.      |  9.932E-05 | N.A.
+ 	     pgf_y=  N.A.      |  8.329E-05 | N.A.
+ 	        Av=  N.A.      |  3.562E+00 | N.A.
+ 	        Kv=  N.A.      |  3.581E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.532E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.901E-03
+     Oce. Dynamics    : 3.149E-03
+     Oce. Update Vel. : 2.549E-04
+     Oce. Fer-GM.     : 8.440E-04
+     _______________________________
+     ALE-Solve SSH    : 5.443E-03
+     ALE-Calc. hbar   : 1.490E-04
+     ALE-Update+W     : 8.252E-04
+     ALE-Solve Tracer : 1.375E-02
+     ALE-Update hnode : 9.203E-05
+     _______________________________
+     check for blowup : 4.285E-03
+     _______________________________
+     Oce. TOTAL       : 3.470E-02
+ 
+ 
+ Updating SSS restoring data for month            5
+ Updating monthly runoff for month            5
+ sst: current mean I/O counter =            4
+ writing mean record for sst; rec. count =            4
+ vwind: current mean I/O counter =            4
+ writing mean record for vwind; rec. count =            4
+ iceoce_x: current mean I/O counter =            4
+ writing mean record for iceoce_x; rec. count =            4
+ fw: current mean I/O counter =            4
+ writing mean record for fw; rec. count =            4
+ m_snow: current mean I/O counter =            4
+ writing mean record for m_snow; rec. count =            4
+ thdgrsn: current mean I/O counter =            4
+ writing mean record for thdgrsn; rec. count =            4
+ vice: current mean I/O counter =            4
+ writing mean record for vice; rec. count =            4
+ iceoce_y: current mean I/O counter =            4
+ writing mean record for iceoce_y; rec. count =            4
+ m_ice: current mean I/O counter =            4
+ writing mean record for m_ice; rec. count =            4
+ a_ice: current mean I/O counter =            4
+ writing mean record for a_ice; rec. count =            4
+ atmice_y: current mean I/O counter =            4
+ writing mean record for atmice_y; rec. count =            4
+ uwind: current mean I/O counter =            4
+ writing mean record for uwind; rec. count =            4
+ evap: current mean I/O counter =            4
+ writing mean record for evap; rec. count =            4
+ ty_sur: current mean I/O counter =            4
+ writing mean record for ty_sur; rec. count =            4
+ thdgr: current mean I/O counter =            4
+ writing mean record for thdgr; rec. count =            4
+ fh: current mean I/O counter =            4
+ writing mean record for fh; rec. count =            4
+ atmoce_y: current mean I/O counter =            4
+ writing mean record for atmoce_y; rec. count =            4
+ MLD1: current mean I/O counter =            4
+ writing mean record for MLD1; rec. count =            4
+ shum: current mean I/O counter =            4
+ writing mean record for shum; rec. count =            4
+ lwr: current mean I/O counter =            4
+ writing mean record for lwr; rec. count =            4
+ MLD2: current mean I/O counter =            4
+ writing mean record for MLD2; rec. count =            4
+ snow: current mean I/O counter =            4
+ writing mean record for snow; rec. count =            4
+ beta: current mean I/O counter =            4
+ writing mean record for beta; rec. count =            4
+ temp: current mean I/O counter =            4
+ writing mean record for temp; rec. count =            4
+ uice: current mean I/O counter =            4
+ writing mean record for uice; rec. count =            4
+ tx_sur: current mean I/O counter =            4
+ writing mean record for tx_sur; rec. count =            4
+ atmoce_x: current mean I/O counter =            4
+ writing mean record for atmoce_x; rec. count =            4
+ atmice_x: current mean I/O counter =            4
+ writing mean record for atmice_x; rec. count =            4
+ tair: current mean I/O counter =            4
+ writing mean record for tair; rec. count =            4
+ swr: current mean I/O counter =            4
+ writing mean record for swr; rec. count =            4
+ salt: current mean I/O counter =            4
+ writing mean record for salt; rec. count =            4
+ ssh: current mean I/O counter =            4
+ writing mean record for ssh; rec. count =            4
+ N2: current mean I/O counter =            4
+ writing mean record for N2; rec. count =            4
+ sss: current mean I/O counter =            4
+ writing mean record for sss; rec. count =            4
+ alpha: current mean I/O counter =            4
+ writing mean record for alpha; rec. count =            4
+ u: current mean I/O counter =            4
+ writing mean record for u; rec. count =            4
+ cd: current mean I/O counter =            4
+ writing mean record for cd; rec. count =            4
+ pgf_x: current mean I/O counter =            4
+ writing mean record for pgf_x; rec. count =            4
+ v: current mean I/O counter =            4
+ writing mean record for v; rec. count =            4
+ prec: current mean I/O counter =            4
+ writing mean record for prec; rec. count =            4
+ pgf_y: current mean I/O counter =            4
+ writing mean record for pgf_y; rec. count =            4
+ runoff: current mean I/O counter =            4
+ writing mean record for runoff; rec. count =            4
+ ch: current mean I/O counter =            4
+ writing mean record for ch; rec. count =            4
+ slope_x: current mean I/O counter =            4
+ writing mean record for slope_x; rec. count =            4
+ slope_z: current mean I/O counter =            4
+ writing mean record for slope_z; rec. count =            4
+ slope_y: current mean I/O counter =            4
+ writing mean record for slope_y; rec. count =            4
+ momix_length: current mean I/O counter =            4
+ writing mean record for momix_length; rec. count =            4
+ ce: current mean I/O counter =            4
+ writing mean record for ce; rec. count =            4
+ FESOM =======================================================
+ FESOM step:      141120  day:         125  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.350E-03
+	Ice Advect.     : 7.751E-04
+	Ice Thermodyn.  : 5.999E-04
+    _______________________________
+	Ice TOTAL       : 7.725E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      141120
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  8.462262943658072E-016  8.462262943658072E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.73675468469557       0.954777738866777     
+ 	 max(hbar), max(hbar)     =  -1.73675468469557       0.954777738866777     
+ 
+ 	 int(deta), int(dhbar)    = -9.183788411374887E-013 -2.157513019345181E-019
+ 	  --> error(deta-dhbar)   = -9.183786253861867E-013
+ 	  --> error(deta-wflux)   = -9.183788411394042E-013
+ 	  --> error(dhbar-wflux)  = -2.157532173402526E-019
+ 
+ 	 -int(wflux)*dt           = -5.746217203511667E-022
+ 	 int(deta )-int(wflux)*dt = -9.183788405628669E-013
+ 	 int(dhbar)-int(wflux)*dt = -2.151766802141669E-019
+ 
+ 	___global min/max/mean  --> mstep=      141120 ____________
+ 	       eta= -1.737E+00 |  9.548E-01 | N.A.
+ 	      deta= -3.593E-03 |  2.135E-03 | N.A.
+ 	      hbar= -1.737E+00 |  9.548E-01 | N.A.
+ 	     wflux= -3.047E-05 |  2.171E-06 |  1.915E-24
+ 	     hflux= -3.940E+02 |  1.063E+04 |  0.000E+00
+ 	      temp= -1.958E+00 |  3.175E+01 |  0.000E+00
+ 	      salt=  3.862E+00 |  3.890E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.971E-17 |  4.106E-17 | N.A.
+ 	 wvel(2,:)= -9.726E-04 |  6.796E-04 | N.A.
+ 	 uvel(1,:)= -1.259E+00 |  1.354E+00 | N.A.
+ 	 uvel(2,:)= -1.255E+00 |  1.356E+00 | N.A.
+ 	 vvel(1,:)= -9.751E-01 |  1.299E+00 | N.A.
+ 	 vvel(2,:)= -9.915E-01 |  1.271E+00 | N.A.
+ 	hnode(1,:)=  9.601E+00 |  1.024E+01 | N.A.
+ 	hnode(2,:)=  9.601E+00 |  1.024E+01 | N.A.
+ 	     cfl_z=  N.A.      |  5.512E-01 | N.A.
+ 	     pgf_x=  N.A.      |  9.367E-05 | N.A.
+ 	     pgf_y=  N.A.      |  8.810E-05 | N.A.
+ 	        Av=  N.A.      |  2.238E+00 | N.A.
+ 	        Kv=  N.A.      |  2.543E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.532E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.902E-03
+     Oce. Dynamics    : 3.044E-03
+     Oce. Update Vel. : 2.389E-04
+     Oce. Fer-GM.     : 7.899E-04
+     _______________________________
+     ALE-Solve SSH    : 5.824E-03
+     ALE-Calc. hbar   : 1.621E-04
+     ALE-Update+W     : 8.891E-04
+     ALE-Solve Tracer : 1.357E-02
+     ALE-Update hnode : 1.030E-04
+     _______________________________
+     check for blowup : 4.502E-03
+     _______________________________
+     Oce. TOTAL       : 3.503E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:      144000  day:         135  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.259E-03
+	Ice Advect.     : 7.699E-04
+	Ice Thermodyn.  : 5.970E-04
+    _______________________________
+	Ice TOTAL       : 7.626E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      144000
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  8.140911186303968E-016  8.140911186303968E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.66820045828336       0.981187413225239     
+ 	 max(hbar), max(hbar)     =  -1.66820045828336       0.981187413225239     
+ 
+ 	 int(deta), int(dhbar)    = -5.669911427179160E-014  1.502086715741077E-019
+ 	  --> error(deta-dhbar)   = -5.669926448046317E-014
+ 	  --> error(deta-wflux)   = -5.669911427019543E-014
+ 	  --> error(dhbar-wflux)  =  1.502102677455531E-019
+ 
+ 	 -int(wflux)*dt           =  4.788514336259723E-022
+ 	 int(deta )-int(wflux)*dt = -5.669911475064303E-014
+ 	 int(dhbar)-int(wflux)*dt =  1.497298201404817E-019
+ 
+ 	___global min/max/mean  --> mstep=      144000 ____________
+ 	       eta= -1.668E+00 |  9.812E-01 | N.A.
+ 	      deta= -4.940E-03 |  5.163E-03 | N.A.
+ 	      hbar= -1.668E+00 |  9.812E-01 | N.A.
+ 	     wflux= -1.948E-05 |  2.912E-06 | -1.596E-24
+ 	     hflux= -3.929E+02 |  6.663E+03 |  0.000E+00
+ 	      temp= -1.933E+00 |  3.179E+01 |  0.000E+00
+ 	      salt=  3.686E+00 |  3.896E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.223E-17 |  5.392E-17 | N.A.
+ 	 wvel(2,:)= -6.975E-04 |  8.522E-04 | N.A.
+ 	 uvel(1,:)= -1.506E+00 |  1.384E+00 | N.A.
+ 	 uvel(2,:)= -1.316E+00 |  1.386E+00 | N.A.
+ 	 vvel(1,:)= -9.801E-01 |  1.297E+00 | N.A.
+ 	 vvel(2,:)= -1.016E+00 |  1.279E+00 | N.A.
+ 	hnode(1,:)=  9.627E+00 |  1.029E+01 | N.A.
+ 	hnode(2,:)=  9.627E+00 |  1.029E+01 | N.A.
+ 	     cfl_z=  N.A.      |  3.066E-01 | N.A.
+ 	     pgf_x=  N.A.      |  9.047E-05 | N.A.
+ 	     pgf_y=  N.A.      |  9.343E-05 | N.A.
+ 	        Av=  N.A.      |  1.822E+00 | N.A.
+ 	        Kv=  N.A.      |  2.410E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.532E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.923E-03
+     Oce. Dynamics    : 3.027E-03
+     Oce. Update Vel. : 2.270E-04
+     Oce. Fer-GM.     : 8.020E-04
+     _______________________________
+     ALE-Solve SSH    : 5.780E-03
+     ALE-Calc. hbar   : 1.600E-04
+     ALE-Update+W     : 8.531E-04
+     ALE-Solve Tracer : 1.349E-02
+     ALE-Update hnode : 1.011E-04
+     _______________________________
+     check for blowup : 4.683E-03
+     _______________________________
+     Oce. TOTAL       : 3.505E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:      146880  day:         145  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.463E-03
+	Ice Advect.     : 7.191E-04
+	Ice Thermodyn.  : 5.970E-04
+    _______________________________
+	Ice TOTAL       : 7.779E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      146880
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  7.712442176498497E-016  7.712442176498497E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.73156381772883       0.998818644435330     
+ 	 max(hbar), max(hbar)     =  -1.73156381772883       0.998818644435330     
+ 
+ 	 int(deta), int(dhbar)    = -5.419471706922909E-013  2.578391506073502E-019
+ 	  --> error(deta-dhbar)   = -5.419474285314415E-013
+ 	  --> error(deta-wflux)   = -5.419471706878216E-013
+ 	  --> error(dhbar-wflux)  =  2.578436198873974E-019
+ 
+ 	 -int(wflux)*dt           =  1.340784014152722E-021
+ 	 int(deta )-int(wflux)*dt = -5.419471720330749E-013
+ 	 int(dhbar)-int(wflux)*dt =  2.564983665931975E-019
+ 
+ 	___global min/max/mean  --> mstep=      146880 ____________
+ 	       eta= -1.732E+00 |  9.988E-01 | N.A.
+ 	      deta= -1.938E-03 |  2.032E-03 | N.A.
+ 	      hbar= -1.732E+00 |  9.988E-01 | N.A.
+ 	     wflux= -9.301E-06 |  2.202E-06 | -4.469E-24
+ 	     hflux= -4.067E+02 |  2.923E+03 |  0.000E+00
+ 	      temp= -1.940E+00 |  3.122E+01 |  0.000E+00
+ 	      salt=  3.308E+00 |  3.901E+01 |  0.000E+00
+ 	 wvel(1,:)= -4.344E-17 |  4.378E-17 | N.A.
+ 	 wvel(2,:)= -5.258E-04 |  7.808E-04 | N.A.
+ 	 uvel(1,:)= -1.364E+00 |  1.249E+00 | N.A.
+ 	 uvel(2,:)= -1.342E+00 |  1.249E+00 | N.A.
+ 	 vvel(1,:)= -8.246E-01 |  1.254E+00 | N.A.
+ 	 vvel(2,:)= -8.216E-01 |  1.202E+00 | N.A.
+ 	hnode(1,:)=  9.616E+00 |  1.025E+01 | N.A.
+ 	hnode(2,:)=  9.616E+00 |  1.025E+01 | N.A.
+ 	     cfl_z=  N.A.      |  1.781E-01 | N.A.
+ 	     pgf_x=  N.A.      |  9.724E-05 | N.A.
+ 	     pgf_y=  N.A.      |  7.662E-05 | N.A.
+ 	        Av=  N.A.      |  1.690E+00 | N.A.
+ 	        Kv=  N.A.      |  2.190E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.532E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 6.195E-03
+     Oce. Dynamics    : 2.723E-03
+     Oce. Update Vel. : 2.420E-04
+     Oce. Fer-GM.     : 8.309E-04
+     _______________________________
+     ALE-Solve SSH    : 5.516E-03
+     ALE-Calc. hbar   : 1.481E-04
+     ALE-Update+W     : 8.030E-04
+     ALE-Solve Tracer : 1.359E-02
+     ALE-Update hnode : 9.608E-05
+     _______________________________
+     check for blowup : 4.613E-03
+     _______________________________
+     Oce. TOTAL       : 3.475E-02
+ 
+ 
+ Updating SSS restoring data for month            6
+ Updating monthly runoff for month            6
+ sst: current mean I/O counter =            5
+ writing mean record for sst; rec. count =            5
+ vwind: current mean I/O counter =            5
+ writing mean record for vwind; rec. count =            5
+ tx_sur: current mean I/O counter =            5
+ writing mean record for tx_sur; rec. count =            5
+ fw: current mean I/O counter =            5
+ writing mean record for fw; rec. count =            5
+ thdgr: current mean I/O counter =            5
+ writing mean record for thdgr; rec. count =            5
+ vice: current mean I/O counter =            5
+ writing mean record for vice; rec. count =            5
+ iceoce_y: current mean I/O counter =            5
+ writing mean record for iceoce_y; rec. count =            5
+ atmice_y: current mean I/O counter =            5
+ writing mean record for atmice_y; rec. count =            5
+ a_ice: current mean I/O counter =            5
+ writing mean record for a_ice; rec. count =            5
+ m_snow: current mean I/O counter =            5
+ writing mean record for m_snow; rec. count =            5
+ ty_sur: current mean I/O counter =            5
+ writing mean record for ty_sur; rec. count =            5
+ iceoce_x: current mean I/O counter =            5
+ writing mean record for iceoce_x; rec. count =            5
+ m_ice: current mean I/O counter =            5
+ writing mean record for m_ice; rec. count =            5
+ uwind: current mean I/O counter =            5
+ writing mean record for uwind; rec. count =            5
+ evap: current mean I/O counter =            5
+ writing mean record for evap; rec. count =            5
+ fh: current mean I/O counter =            5
+ writing mean record for fh; rec. count =            5
+ thdgrsn: current mean I/O counter =            5
+ writing mean record for thdgrsn; rec. count =            5
+ MLD1: current mean I/O counter =            5
+ writing mean record for MLD1; rec. count =            5
+ shum: current mean I/O counter =            5
+ writing mean record for shum; rec. count =            5
+ MLD2: current mean I/O counter =            5
+ writing mean record for MLD2; rec. count =            5
+ lwr: current mean I/O counter =            5
+ writing mean record for lwr; rec. count =            5
+ temp: current mean I/O counter =            5
+ writing mean record for temp; rec. count =            5
+ snow: current mean I/O counter =            5
+ writing mean record for snow; rec. count =            5
+ pgf_x: current mean I/O counter =            5
+ writing mean record for pgf_x; rec. count =            5
+ uice: current mean I/O counter =            5
+ writing mean record for uice; rec. count =            5
+ atmoce_x: current mean I/O counter =            5
+ writing mean record for atmoce_x; rec. count =            5
+ atmice_x: current mean I/O counter =            5
+ writing mean record for atmice_x; rec. count =            5
+ swr: current mean I/O counter =            5
+ writing mean record for swr; rec. count =            5
+ atmoce_y: current mean I/O counter =            5
+ writing mean record for atmoce_y; rec. count =            5
+ tair: current mean I/O counter =            5
+ writing mean record for tair; rec. count =            5
+ ssh: current mean I/O counter =            5
+ writing mean record for ssh; rec. count =            5
+ salt: current mean I/O counter =            5
+ writing mean record for salt; rec. count =            5
+ prec: current mean I/O counter =            5
+ writing mean record for prec; rec. count =            5
+ N2: current mean I/O counter =            5
+ writing mean record for N2; rec. count =            5
+ ce: current mean I/O counter =            5
+ writing mean record for ce; rec. count =            5
+ u: current mean I/O counter =            5
+ writing mean record for u; rec. count =            5
+ v: current mean I/O counter =            5
+ writing mean record for v; rec. count =            5
+ sss: current mean I/O counter =            5
+ writing mean record for sss; rec. count =            5
+ pgf_y: current mean I/O counter =            5
+ writing mean record for pgf_y; rec. count =            5
+ ch: current mean I/O counter =            5
+ writing mean record for ch; rec. count =            5
+ slope_x: current mean I/O counter =            5
+ writing mean record for slope_x; rec. count =            5
+ slope_y: current mean I/O counter =            5
+ writing mean record for slope_y; rec. count =            5
+ momix_length: current mean I/O counter =            5
+ writing mean record for momix_length; rec. count =            5
+ slope_z: current mean I/O counter =            5
+ writing mean record for slope_z; rec. count =            5
+ runoff: current mean I/O counter =            5
+ writing mean record for runoff; rec. count =            5
+ alpha: current mean I/O counter =            5
+ writing mean record for alpha; rec. count =            5
+ beta: current mean I/O counter =            5
+ writing mean record for beta; rec. count =            5
+ cd: current mean I/O counter =            5
+ writing mean record for cd; rec. count =            5
+ FESOM =======================================================
+ FESOM step:      149760  day:         155  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 8.492E-03
+	Ice Advect.     : 1.124E-03
+	Ice Thermodyn.  : 6.001E-04
+    _______________________________
+	Ice TOTAL       : 1.022E-02
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      149760
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  6.962621409338920E-016  6.962621409338920E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.80881216341000        1.02016468423711     
+ 	 max(hbar), max(hbar)     =  -1.80881216341000        1.02016468423711     
+ 
+ 	 int(deta), int(dhbar)    =  1.428357271470396E-013 -2.484408931367178E-019
+ 	  --> error(deta-dhbar)   =  1.428359755879327E-013
+ 	  --> error(deta-wflux)   =  1.428357271489550E-013
+ 	  --> error(dhbar-wflux)  = -2.484389777309833E-019
+ 
+ 	 -int(wflux)*dt           =  5.746217203511667E-022
+ 	 int(deta )-int(wflux)*dt =  1.428357265724179E-013
+ 	 int(dhbar)-int(wflux)*dt = -2.490155148570689E-019
+ 
+ 	___global min/max/mean  --> mstep=      149760 ____________
+ 	       eta= -1.809E+00 |  1.020E+00 | N.A.
+ 	      deta= -2.865E-03 |  2.218E-03 | N.A.
+ 	      hbar= -1.809E+00 |  1.020E+00 | N.A.
+ 	     wflux= -1.695E-05 |  1.534E-06 | -1.915E-24
+ 	     hflux= -4.285E+02 |  5.772E+03 |  0.000E+00
+ 	      temp= -1.950E+00 |  3.108E+01 |  0.000E+00
+ 	      salt=  3.275E+00 |  3.909E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.505E-17 |  5.298E-17 | N.A.
+ 	 wvel(2,:)= -8.650E-04 |  8.725E-04 | N.A.
+ 	 uvel(1,:)= -1.286E+00 |  1.581E+00 | N.A.
+ 	 uvel(2,:)= -1.220E+00 |  1.578E+00 | N.A.
+ 	 vvel(1,:)= -1.377E+00 |  1.379E+00 | N.A.
+ 	 vvel(2,:)= -1.221E+00 |  1.210E+00 | N.A.
+ 	hnode(1,:)=  9.587E+00 |  1.029E+01 | N.A.
+ 	hnode(2,:)=  9.587E+00 |  1.029E+01 | N.A.
+ 	     cfl_z=  N.A.      |  3.635E-01 | N.A.
+ 	     pgf_x=  N.A.      |  9.034E-05 | N.A.
+ 	     pgf_y=  N.A.      |  8.641E-05 | N.A.
+ 	        Av=  N.A.      |  1.752E+00 | N.A.
+ 	        Kv=  N.A.      |  2.380E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.531E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 6.447E-03
+     Oce. Dynamics    : 3.330E-03
+     Oce. Update Vel. : 2.291E-04
+     Oce. Fer-GM.     : 8.121E-04
+     _______________________________
+     ALE-Solve SSH    : 5.477E-03
+     ALE-Calc. hbar   : 1.469E-04
+     ALE-Update+W     : 8.039E-04
+     ALE-Solve Tracer : 1.358E-02
+     ALE-Update hnode : 9.203E-05
+     _______________________________
+     check for blowup : 4.159E-03
+     _______________________________
+     Oce. TOTAL       : 3.508E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:      152640  day:         165  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.403E-03
+	Ice Advect.     : 7.689E-04
+	Ice Thermodyn.  : 6.142E-04
+    _______________________________
+	Ice TOTAL       : 7.786E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      152640
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  8.140911186303968E-016  8.140911186303968E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.78316786887741        1.01060780701998     
+ 	 max(hbar), max(hbar)     =  -1.78316786887741        1.01060780701998     
+ 
+ 	 int(deta), int(dhbar)    = -7.929832769900950E-013 -9.937635725468711E-020
+ 	  --> error(deta-dhbar)   = -7.929831776137377E-013
+ 	  --> error(deta-wflux)   = -7.929832769900950E-013
+ 	  --> error(dhbar-wflux)  = -9.937635725468711E-020
+ 
+ 	 -int(wflux)*dt           =  0.000000000000000E+000
+ 	 int(deta )-int(wflux)*dt = -7.929832769900950E-013
+ 	 int(dhbar)-int(wflux)*dt = -9.937635725468711E-020
+ 
+ 	___global min/max/mean  --> mstep=      152640 ____________
+ 	       eta= -1.783E+00 |  1.011E+00 | N.A.
+ 	      deta= -3.311E-03 |  2.673E-03 | N.A.
+ 	      hbar= -1.783E+00 |  1.011E+00 | N.A.
+ 	     wflux= -2.177E-05 |  2.240E-06 |  0.000E+00
+ 	     hflux= -3.821E+02 |  7.262E+03 |  0.000E+00
+ 	      temp= -1.954E+00 |  3.118E+01 |  0.000E+00
+ 	      salt=  3.591E+00 |  3.918E+01 |  0.000E+00
+ 	 wvel(1,:)= -4.990E-17 |  4.552E-17 | N.A.
+ 	 wvel(2,:)= -9.035E-04 |  9.512E-04 | N.A.
+ 	 uvel(1,:)= -1.196E+00 |  2.041E+00 | N.A.
+ 	 uvel(2,:)= -1.196E+00 |  2.038E+00 | N.A.
+ 	 vvel(1,:)= -1.126E+00 |  1.204E+00 | N.A.
+ 	 vvel(2,:)= -1.081E+00 |  1.197E+00 | N.A.
+ 	hnode(1,:)=  9.606E+00 |  1.028E+01 | N.A.
+ 	hnode(2,:)=  9.606E+00 |  1.028E+01 | N.A.
+ 	     cfl_z=  N.A.      |  2.122E-01 | N.A.
+ 	     pgf_x=  N.A.      |  8.722E-05 | N.A.
+ 	     pgf_y=  N.A.      |  9.226E-05 | N.A.
+ 	        Av=  N.A.      |  1.384E+00 | N.A.
+ 	        Kv=  N.A.      |  1.921E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.530E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 6.037E-03
+     Oce. Dynamics    : 3.055E-03
+     Oce. Update Vel. : 2.432E-04
+     Oce. Fer-GM.     : 8.230E-04
+     _______________________________
+     ALE-Solve SSH    : 5.576E-03
+     ALE-Calc. hbar   : 1.469E-04
+     ALE-Update+W     : 8.171E-04
+     ALE-Solve Tracer : 1.373E-02
+     ALE-Update hnode : 9.203E-05
+     _______________________________
+     check for blowup : 4.270E-03
+     _______________________________
+     Oce. TOTAL       : 3.479E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:      155520  day:         175  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.329E-03
+	Ice Advect.     : 7.479E-04
+	Ice Thermodyn.  : 5.991E-04
+    _______________________________
+	Ice TOTAL       : 7.676E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      155520
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  7.498207671595760E-016  7.498207671595760E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.73170656287031        1.01922602602596     
+ 	 max(hbar), max(hbar)     =  -1.73170656287031        1.01922602602596     
+ 
+ 	 int(deta), int(dhbar)    = -2.864798273494166E-013  2.092133836940781E-020
+ 	  --> error(deta-dhbar)   = -2.864798482707549E-013
+ 	  --> error(deta-wflux)   = -2.864798273452665E-013
+ 	  --> error(dhbar-wflux)  =  2.092548841516591E-020
+ 
+ 	 -int(wflux)*dt           =  1.245013727427528E-021
+ 	 int(deta )-int(wflux)*dt = -2.864798285944303E-013
+ 	 int(dhbar)-int(wflux)*dt =  1.967632464198029E-020
+ 
+ 	___global min/max/mean  --> mstep=      155520 ____________
+ 	       eta= -1.732E+00 |  1.019E+00 | N.A.
+ 	      deta= -4.163E-03 |  4.768E-03 | N.A.
+ 	      hbar= -1.732E+00 |  1.019E+00 | N.A.
+ 	     wflux= -3.034E-05 |  1.864E-06 | -4.150E-24
+ 	     hflux= -4.933E+02 |  1.029E+04 |  0.000E+00
+ 	      temp= -1.944E+00 |  3.095E+01 |  0.000E+00
+ 	      salt=  3.694E+00 |  3.926E+01 |  0.000E+00
+ 	 wvel(1,:)= -4.551E-17 |  3.877E-17 | N.A.
+ 	 wvel(2,:)= -8.349E-04 |  1.290E-03 | N.A.
+ 	 uvel(1,:)= -1.082E+00 |  1.962E+00 | N.A.
+ 	 uvel(2,:)= -1.076E+00 |  1.957E+00 | N.A.
+ 	 vvel(1,:)= -9.556E-01 |  1.215E+00 | N.A.
+ 	 vvel(2,:)= -8.315E-01 |  1.190E+00 | N.A.
+ 	hnode(1,:)=  9.577E+00 |  1.025E+01 | N.A.
+ 	hnode(2,:)=  9.577E+00 |  1.025E+01 | N.A.
+ 	     cfl_z=  N.A.      |  4.150E-01 | N.A.
+ 	     pgf_x=  N.A.      |  9.475E-05 | N.A.
+ 	     pgf_y=  N.A.      |  9.657E-05 | N.A.
+ 	        Av=  N.A.      |  1.253E+00 | N.A.
+ 	        Kv=  N.A.      |  1.702E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.530E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 6.127E-03
+     Oce. Dynamics    : 2.751E-03
+     Oce. Update Vel. : 2.410E-04
+     Oce. Fer-GM.     : 8.049E-04
+     _______________________________
+     ALE-Solve SSH    : 6.018E-03
+     ALE-Calc. hbar   : 2.320E-04
+     ALE-Update+W     : 7.861E-04
+     ALE-Solve Tracer : 1.371E-02
+     ALE-Update hnode : 1.020E-04
+     _______________________________
+     check for blowup : 4.192E-03
+     _______________________________
+     Oce. TOTAL       : 3.497E-02
+ 
+ 
+ Updating SSS restoring data for month            7
+ Updating monthly runoff for month            7
+ sst: current mean I/O counter =            6
+ writing mean record for sst; rec. count =            6
+ vwind: current mean I/O counter =            6
+ writing mean record for vwind; rec. count =            6
+ atmoce_y: current mean I/O counter =            6
+ writing mean record for atmoce_y; rec. count =            6
+ fw: current mean I/O counter =            6
+ writing mean record for fw; rec. count =            6
+ vice: current mean I/O counter =            6
+ writing mean record for vice; rec. count =            6
+ fh: current mean I/O counter =            6
+ writing mean record for fh; rec. count =            6
+ m_snow: current mean I/O counter =            6
+ writing mean record for m_snow; rec. count =            6
+ a_ice: current mean I/O counter =            6
+ writing mean record for a_ice; rec. count =            6
+ thdgrsn: current mean I/O counter =            6
+ writing mean record for thdgrsn; rec. count =            6
+ iceoce_y: current mean I/O counter =            6
+ writing mean record for iceoce_y; rec. count =            6
+ iceoce_x: current mean I/O counter =            6
+ writing mean record for iceoce_x; rec. count =            6
+ m_ice: current mean I/O counter =            6
+ writing mean record for m_ice; rec. count =            6
+ thdgr: current mean I/O counter =            6
+ writing mean record for thdgr; rec. count =            6
+ evap: current mean I/O counter =            6
+ writing mean record for evap; rec. count =            6
+ MLD1: current mean I/O counter =            6
+ writing mean record for MLD1; rec. count =            6
+ ty_sur: current mean I/O counter =            6
+ writing mean record for ty_sur; rec. count =            6
+ MLD2: current mean I/O counter =            6
+ writing mean record for MLD2; rec. count =            6
+ shum: current mean I/O counter =            6
+ writing mean record for shum; rec. count =            6
+ snow: current mean I/O counter =            6
+ writing mean record for snow; rec. count =            6
+ atmice_y: current mean I/O counter =            6
+ writing mean record for atmice_y; rec. count =            6
+ lwr: current mean I/O counter =            6
+ writing mean record for lwr; rec. count =            6
+ uwind: current mean I/O counter =            6
+ writing mean record for uwind; rec. count =            6
+ temp: current mean I/O counter =            6
+ writing mean record for temp; rec. count =            6
+ N2: current mean I/O counter =            6
+ writing mean record for N2; rec. count =            6
+ pgf_x: current mean I/O counter =            6
+ writing mean record for pgf_x; rec. count =            6
+ uice: current mean I/O counter =            6
+ writing mean record for uice; rec. count =            6
+ tx_sur: current mean I/O counter =            6
+ writing mean record for tx_sur; rec. count =            6
+ atmoce_x: current mean I/O counter =            6
+ writing mean record for atmoce_x; rec. count =            6
+ tair: current mean I/O counter =            6
+ writing mean record for tair; rec. count =            6
+ atmice_x: current mean I/O counter =            6
+ writing mean record for atmice_x; rec. count =            6
+ swr: current mean I/O counter =            6
+ writing mean record for swr; rec. count =            6
+ salt: current mean I/O counter =            6
+ writing mean record for salt; rec. count =            6
+ cd: current mean I/O counter =            6
+ writing mean record for cd; rec. count =            6
+ alpha: current mean I/O counter =            6
+ writing mean record for alpha; rec. count =            6
+ u: current mean I/O counter =            6
+ writing mean record for u; rec. count =            6
+ slope_z: current mean I/O counter =            6
+ writing mean record for slope_z; rec. count =            6
+ prec: current mean I/O counter =            6
+ writing mean record for prec; rec. count =            6
+ ce: current mean I/O counter =            6
+ writing mean record for ce; rec. count =            6
+ runoff: current mean I/O counter =            6
+ writing mean record for runoff; rec. count =            6
+ v: current mean I/O counter =            6
+ writing mean record for v; rec. count =            6
+ ssh: current mean I/O counter =            6
+ writing mean record for ssh; rec. count =            6
+ sss: current mean I/O counter =            6
+ writing mean record for sss; rec. count =            6
+ pgf_y: current mean I/O counter =            6
+ writing mean record for pgf_y; rec. count =            6
+ slope_x: current mean I/O counter =            6
+ writing mean record for slope_x; rec. count =            6
+ momix_length: current mean I/O counter =            6
+ writing mean record for momix_length; rec. count =            6
+ slope_y: current mean I/O counter =            6
+ writing mean record for slope_y; rec. count =            6
+ beta: current mean I/O counter =            6
+ writing mean record for beta; rec. count =            6
+ ch: current mean I/O counter =            6
+ writing mean record for ch; rec. count =            6
+ FESOM =======================================================
+ FESOM step:      158400  day:         185  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.255E-03
+	Ice Advect.     : 7.980E-04
+	Ice Thermodyn.  : 5.920E-04
+    _______________________________
+	Ice TOTAL       : 7.645E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      158400
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  7.391090419144393E-016  7.391090419144393E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.76625676355851        1.01582528404946     
+ 	 max(hbar), max(hbar)     =  -1.76625676355851        1.01582528404946     
+ 
+ 	 int(deta), int(dhbar)    = -3.157596117511588E-013 -4.184267673881563E-020
+ 	  --> error(deta-dhbar)   = -3.157595699084821E-013
+ 	  --> error(deta-wflux)   = -3.157596117428588E-013
+ 	  --> error(dhbar-wflux)  = -4.183437664729944E-020
+ 
+ 	 -int(wflux)*dt           =  2.490027454855056E-021
+ 	 int(deta )-int(wflux)*dt = -3.157596142411863E-013
+ 	 int(dhbar)-int(wflux)*dt = -4.433270419367068E-020
+ 
+ 	___global min/max/mean  --> mstep=      158400 ____________
+ 	       eta= -1.766E+00 |  1.016E+00 | N.A.
+ 	      deta= -1.934E-03 |  1.726E-03 | N.A.
+ 	      hbar= -1.766E+00 |  1.016E+00 | N.A.
+ 	     wflux= -2.032E-05 |  1.999E-06 | -8.300E-24
+ 	     hflux= -4.209E+02 |  6.877E+03 |  0.000E+00
+ 	      temp= -1.934E+00 |  3.109E+01 |  0.000E+00
+ 	      salt=  3.819E+00 |  3.931E+01 |  0.000E+00
+ 	 wvel(1,:)= -4.613E-17 |  6.417E-17 | N.A.
+ 	 wvel(2,:)= -8.704E-04 |  8.120E-04 | N.A.
+ 	 uvel(1,:)= -1.202E+00 |  2.085E+00 | N.A.
+ 	 uvel(2,:)= -1.199E+00 |  2.076E+00 | N.A.
+ 	 vvel(1,:)= -1.004E+00 |  1.336E+00 | N.A.
+ 	 vvel(2,:)= -9.896E-01 |  1.304E+00 | N.A.
+ 	hnode(1,:)=  9.579E+00 |  1.023E+01 | N.A.
+ 	hnode(2,:)=  9.579E+00 |  1.023E+01 | N.A.
+ 	     cfl_z=  N.A.      |  2.067E-01 | N.A.
+ 	     pgf_x=  N.A.      |  8.952E-05 | N.A.
+ 	     pgf_y=  N.A.      |  9.400E-05 | N.A.
+ 	        Av=  N.A.      |  1.180E+00 | N.A.
+ 	        Kv=  N.A.      |  1.772E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.529E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.924E-03
+     Oce. Dynamics    : 2.869E-03
+     Oce. Update Vel. : 2.100E-04
+     Oce. Fer-GM.     : 8.280E-04
+     _______________________________
+     ALE-Solve SSH    : 6.300E-03
+     ALE-Calc. hbar   : 1.810E-04
+     ALE-Update+W     : 7.880E-04
+     ALE-Solve Tracer : 1.362E-02
+     ALE-Update hnode : 9.394E-05
+     _______________________________
+     check for blowup : 4.024E-03
+     _______________________________
+     Oce. TOTAL       : 3.484E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:      161280  day:         195  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.308E-03
+	Ice Advect.     : 7.441E-04
+	Ice Thermodyn.  : 5.910E-04
+    _______________________________
+	Ice TOTAL       : 7.643E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      161280
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  7.498207671595760E-016  7.498207671595760E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.73100743328434        1.00243577527876     
+ 	 max(hbar), max(hbar)     =  -1.73100743328434        1.00243577527876     
+ 
+ 	 int(deta), int(dhbar)    =  3.658422393307437E-013 -6.537918240439942E-021
+ 	  --> error(deta-dhbar)   =  3.658422458686620E-013
+ 	  --> error(deta-wflux)   =  3.658422393332976E-013
+ 	  --> error(dhbar-wflux)  = -6.535364366127271E-021
+ 
+ 	 -int(wflux)*dt           =  7.661622938015557E-022
+ 	 int(deta )-int(wflux)*dt =  3.658422385645814E-013
+ 	 int(dhbar)-int(wflux)*dt = -7.304080534241498E-021
+ 
+ 	___global min/max/mean  --> mstep=      161280 ____________
+ 	       eta= -1.731E+00 |  1.002E+00 | N.A.
+ 	      deta= -2.026E-03 |  2.071E-03 | N.A.
+ 	      hbar= -1.731E+00 |  1.002E+00 | N.A.
+ 	     wflux= -3.732E-05 |  1.576E-06 | -2.554E-24
+ 	     hflux= -3.838E+02 |  1.223E+04 |  0.000E+00
+ 	      temp= -1.920E+00 |  3.199E+01 |  0.000E+00
+ 	      salt=  3.874E+00 |  3.939E+01 |  0.000E+00
+ 	 wvel(1,:)= -6.359E-17 |  4.757E-17 | N.A.
+ 	 wvel(2,:)= -6.432E-04 |  6.085E-04 | N.A.
+ 	 uvel(1,:)= -1.406E+00 |  2.000E+00 | N.A.
+ 	 uvel(2,:)= -1.338E+00 |  1.957E+00 | N.A.
+ 	 vvel(1,:)= -8.622E-01 |  1.329E+00 | N.A.
+ 	 vvel(2,:)= -8.876E-01 |  1.304E+00 | N.A.
+ 	hnode(1,:)=  9.575E+00 |  1.027E+01 | N.A.
+ 	hnode(2,:)=  9.575E+00 |  1.027E+01 | N.A.
+ 	     cfl_z=  N.A.      |  2.618E-01 | N.A.
+ 	     pgf_x=  N.A.      |  1.092E-04 | N.A.
+ 	     pgf_y=  N.A.      |  9.549E-05 | N.A.
+ 	        Av=  N.A.      |  1.822E+00 | N.A.
+ 	        Kv=  N.A.      |  2.687E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.526E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.864E-03
+     Oce. Dynamics    : 3.125E-03
+     Oce. Update Vel. : 2.489E-04
+     Oce. Fer-GM.     : 8.099E-04
+     _______________________________
+     ALE-Solve SSH    : 5.815E-03
+     ALE-Calc. hbar   : 1.571E-04
+     ALE-Update+W     : 8.681E-04
+     ALE-Solve Tracer : 1.361E-02
+     ALE-Update hnode : 9.704E-05
+     _______________________________
+     check for blowup : 4.436E-03
+     _______________________________
+     Oce. TOTAL       : 3.504E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:      164160  day:         205  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.306E-03
+	Ice Advect.     : 7.679E-04
+	Ice Thermodyn.  : 6.042E-04
+    _______________________________
+	Ice TOTAL       : 7.678E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      164160
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  8.248028438755336E-016  8.248028438755336E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.78522192931287        1.03584660560162     
+ 	 max(hbar), max(hbar)     =  -1.78522192931287        1.03584660560162     
+ 
+ 	 int(deta), int(dhbar)    =  2.711043892720720E-013 -3.386641648547890E-019
+ 	  --> error(deta-dhbar)   =  2.711047279362368E-013
+ 	  --> error(deta-wflux)   =  2.711043892714335E-013
+ 	  --> error(dhbar-wflux)  = -3.386648033233671E-019
+ 
+ 	 -int(wflux)*dt           = -1.915405734503889E-022
+ 	 int(deta )-int(wflux)*dt =  2.711043894636126E-013
+ 	 int(dhbar)-int(wflux)*dt = -3.384726242813386E-019
+ 
+ 	___global min/max/mean  --> mstep=      164160 ____________
+ 	       eta= -1.785E+00 |  1.036E+00 | N.A.
+ 	      deta= -2.480E-03 |  1.006E-02 | N.A.
+ 	      hbar= -1.785E+00 |  1.036E+00 | N.A.
+ 	     wflux= -1.396E-05 |  1.448E-06 |  6.385E-25
+ 	     hflux= -3.944E+02 |  4.590E+03 |  0.000E+00
+ 	      temp= -1.914E+00 |  3.221E+01 |  0.000E+00
+ 	      salt=  3.796E+00 |  3.945E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.501E-17 |  6.009E-17 | N.A.
+ 	 wvel(2,:)= -1.098E-03 |  7.481E-04 | N.A.
+ 	 uvel(1,:)= -1.742E+00 |  1.953E+00 | N.A.
+ 	 uvel(2,:)= -1.653E+00 |  1.845E+00 | N.A.
+ 	 vvel(1,:)= -8.809E-01 |  1.626E+00 | N.A.
+ 	 vvel(2,:)= -8.840E-01 |  1.576E+00 | N.A.
+ 	hnode(1,:)=  9.557E+00 |  1.027E+01 | N.A.
+ 	hnode(2,:)=  9.557E+00 |  1.027E+01 | N.A.
+ 	     cfl_z=  N.A.      |  2.451E-01 | N.A.
+ 	     pgf_x=  N.A.      |  1.019E-04 | N.A.
+ 	     pgf_y=  N.A.      |  1.016E-04 | N.A.
+ 	        Av=  N.A.      |  1.160E+00 | N.A.
+ 	        Kv=  N.A.      |  1.708E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.507E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.949E-03
+     Oce. Dynamics    : 2.810E-03
+     Oce. Update Vel. : 2.620E-04
+     Oce. Fer-GM.     : 8.299E-04
+     _______________________________
+     ALE-Solve SSH    : 6.084E-03
+     ALE-Calc. hbar   : 1.540E-04
+     ALE-Update+W     : 7.789E-04
+     ALE-Solve Tracer : 1.383E-02
+     ALE-Update hnode : 9.584E-05
+     _______________________________
+     check for blowup : 4.166E-03
+     _______________________________
+     Oce. TOTAL       : 3.496E-02
+ 
+ 
+ Updating SSS restoring data for month            8
+ Updating monthly runoff for month            8
+ sst: current mean I/O counter =            7
+ writing mean record for sst; rec. count =            7
+ vwind: current mean I/O counter =            7
+ writing mean record for vwind; rec. count =            7
+ tx_sur: current mean I/O counter =            7
+ writing mean record for tx_sur; rec. count =            7
+ fw: current mean I/O counter =            7
+ writing mean record for fw; rec. count =            7
+ vice: current mean I/O counter =            7
+ writing mean record for vice; rec. count =            7
+ atmoce_y: current mean I/O counter =            7
+ writing mean record for atmoce_y; rec. count =            7
+ ty_sur: current mean I/O counter =            7
+ writing mean record for ty_sur; rec. count =            7
+ a_ice: current mean I/O counter =            7
+ writing mean record for a_ice; rec. count =            7
+ m_ice: current mean I/O counter =            7
+ writing mean record for m_ice; rec. count =            7
+ iceoce_x: current mean I/O counter =            7
+ writing mean record for iceoce_x; rec. count =            7
+ thdgrsn: current mean I/O counter =            7
+ writing mean record for thdgrsn; rec. count =            7
+ iceoce_y: current mean I/O counter =            7
+ writing mean record for iceoce_y; rec. count =            7
+ fh: current mean I/O counter =            7
+ writing mean record for fh; rec. count =            7
+ m_snow: current mean I/O counter =            7
+ writing mean record for m_snow; rec. count =            7
+ MLD2: current mean I/O counter =            7
+ writing mean record for MLD2; rec. count =            7
+ atmice_y: current mean I/O counter =            7
+ writing mean record for atmice_y; rec. count =            7
+ evap: current mean I/O counter =            7
+ writing mean record for evap; rec. count =            7
+ MLD1: current mean I/O counter =            7
+ writing mean record for MLD1; rec. count =            7
+ lwr: current mean I/O counter =            7
+ writing mean record for lwr; rec. count =            7
+ shum: current mean I/O counter =            7
+ writing mean record for shum; rec. count =            7
+ uwind: current mean I/O counter =            7
+ writing mean record for uwind; rec. count =            7
+ salt: current mean I/O counter =            7
+ writing mean record for salt; rec. count =            7
+ temp: current mean I/O counter =            7
+ writing mean record for temp; rec. count =            7
+ snow: current mean I/O counter =            7
+ writing mean record for snow; rec. count =            7
+ pgf_x: current mean I/O counter =            7
+ writing mean record for pgf_x; rec. count =            7
+ uice: current mean I/O counter =            7
+ writing mean record for uice; rec. count =            7
+ thdgr: current mean I/O counter =            7
+ writing mean record for thdgr; rec. count =            7
+ tair: current mean I/O counter =            7
+ writing mean record for tair; rec. count =            7
+ atmice_x: current mean I/O counter =            7
+ writing mean record for atmice_x; rec. count =            7
+ atmoce_x: current mean I/O counter =            7
+ writing mean record for atmoce_x; rec. count =            7
+ swr: current mean I/O counter =            7
+ writing mean record for swr; rec. count =            7
+ ssh: current mean I/O counter =            7
+ writing mean record for ssh; rec. count =            7
+ N2: current mean I/O counter =            7
+ writing mean record for N2; rec. count =            7
+ ce: current mean I/O counter =            7
+ writing mean record for ce; rec. count =            7
+ u: current mean I/O counter =            7
+ writing mean record for u; rec. count =            7
+ momix_length: current mean I/O counter =            7
+ writing mean record for momix_length; rec. count =            7
+ v: current mean I/O counter =            7
+ writing mean record for v; rec. count =            7
+ ch: current mean I/O counter =            7
+ writing mean record for ch; rec. count =            7
+ slope_z: current mean I/O counter =            7
+ writing mean record for slope_z; rec. count =            7
+ pgf_y: current mean I/O counter =            7
+ writing mean record for pgf_y; rec. count =            7
+ sss: current mean I/O counter =            7
+ writing mean record for sss; rec. count =            7
+ runoff: current mean I/O counter =            7
+ writing mean record for runoff; rec. count =            7
+ prec: current mean I/O counter =            7
+ writing mean record for prec; rec. count =            7
+ slope_x: current mean I/O counter =            7
+ writing mean record for slope_x; rec. count =            7
+ slope_y: current mean I/O counter =            7
+ writing mean record for slope_y; rec. count =            7
+ alpha: current mean I/O counter =            7
+ writing mean record for alpha; rec. count =            7
+ beta: current mean I/O counter =            7
+ writing mean record for beta; rec. count =            7
+ cd: current mean I/O counter =            7
+ writing mean record for cd; rec. count =            7
+ FESOM =======================================================
+ FESOM step:      167040  day:         215  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.277E-03
+	Ice Advect.     : 7.472E-04
+	Ice Thermodyn.  : 5.949E-04
+    _______________________________
+	Ice TOTAL       : 7.619E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      167040
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  7.605324924047128E-016  7.605324924047128E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.71222872394708        1.01718416167754     
+ 	 max(hbar), max(hbar)     =  -1.71222872394708        1.01718416167754     
+ 
+ 	 int(deta), int(dhbar)    = -8.989180907015825E-014 -4.923052435051276E-019
+ 	  --> error(deta-dhbar)   = -8.989131676491475E-014
+ 	  --> error(deta-wflux)   = -8.989180906951978E-014
+ 	  --> error(dhbar-wflux)  = -4.923046050365495E-019
+ 
+ 	 -int(wflux)*dt           =  1.915405734503889E-022
+ 	 int(deta )-int(wflux)*dt = -8.989180926169883E-014
+ 	 int(dhbar)-int(wflux)*dt = -4.924967840785780E-019
+ 
+ 	___global min/max/mean  --> mstep=      167040 ____________
+ 	       eta= -1.712E+00 |  1.017E+00 | N.A.
+ 	      deta= -2.419E-03 |  3.794E-03 | N.A.
+ 	      hbar= -1.712E+00 |  1.017E+00 | N.A.
+ 	     wflux= -1.490E-05 |  4.334E-06 | -6.385E-25
+ 	     hflux= -3.459E+02 |  4.970E+03 |  0.000E+00
+ 	      temp= -1.905E+00 |  3.232E+01 |  0.000E+00
+ 	      salt=  3.968E+00 |  3.947E+01 |  0.000E+00
+ 	 wvel(1,:)= -4.878E-17 |  5.569E-17 | N.A.
+ 	 wvel(2,:)= -1.346E-03 |  1.442E-03 | N.A.
+ 	 uvel(1,:)= -1.585E+00 |  1.871E+00 | N.A.
+ 	 uvel(2,:)= -1.489E+00 |  1.849E+00 | N.A.
+ 	 vvel(1,:)= -8.138E-01 |  1.452E+00 | N.A.
+ 	 vvel(2,:)= -8.420E-01 |  1.359E+00 | N.A.
+ 	hnode(1,:)=  9.528E+00 |  1.028E+01 | N.A.
+ 	hnode(2,:)=  9.528E+00 |  1.028E+01 | N.A.
+ 	     cfl_z=  N.A.      |  3.087E-01 | N.A.
+ 	     pgf_x=  N.A.      |  9.896E-05 | N.A.
+ 	     pgf_y=  N.A.      |  9.456E-05 | N.A.
+ 	        Av=  N.A.      |  1.238E+00 | N.A.
+ 	        Kv=  N.A.      |  1.807E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.496E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 6.035E-03
+     Oce. Dynamics    : 2.791E-03
+     Oce. Update Vel. : 2.332E-04
+     Oce. Fer-GM.     : 8.121E-04
+     _______________________________
+     ALE-Solve SSH    : 6.522E-03
+     ALE-Calc. hbar   : 1.659E-04
+     ALE-Update+W     : 8.578E-04
+     ALE-Solve Tracer : 1.357E-02
+     ALE-Update hnode : 1.009E-04
+     _______________________________
+     check for blowup : 4.091E-03
+     _______________________________
+     Oce. TOTAL       : 3.518E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:      169920  day:         225  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.357E-03
+	Ice Advect.     : 7.248E-04
+	Ice Thermodyn.  : 5.991E-04
+    _______________________________
+	Ice TOTAL       : 7.681E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      169920
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  8.248028438755336E-016  8.248028438755336E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.73299370272271        1.02381235615338     
+ 	 max(hbar), max(hbar)     =  -1.73299370272271        1.02381235615338     
+ 
+ 	 int(deta), int(dhbar)    =  1.534374604170747E-013 -3.138200755411172E-020
+ 	  --> error(deta-dhbar)   =  1.534374917990823E-013
+ 	  --> error(deta-wflux)   =  1.534374604157978E-013
+ 	  --> error(dhbar-wflux)  = -3.138328449126805E-020
+ 
+ 	 -int(wflux)*dt           = -3.830811469007778E-022
+ 	 int(deta )-int(wflux)*dt =  1.534374608001559E-013
+ 	 int(dhbar)-int(wflux)*dt = -3.099892640721094E-020
+ 
+ 	___global min/max/mean  --> mstep=      169920 ____________
+ 	       eta= -1.733E+00 |  1.024E+00 | N.A.
+ 	      deta= -2.514E-03 |  2.111E-03 | N.A.
+ 	      hbar= -1.733E+00 |  1.024E+00 | N.A.
+ 	     wflux= -1.867E-05 |  1.802E-06 |  1.277E-24
+ 	     hflux= -3.828E+02 |  6.303E+03 |  0.000E+00
+ 	      temp= -1.907E+00 |  3.177E+01 |  0.000E+00
+ 	      salt=  4.046E+00 |  3.950E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.113E-17 |  4.582E-17 | N.A.
+ 	 wvel(2,:)= -1.427E-03 |  1.244E-03 | N.A.
+ 	 uvel(1,:)= -1.579E+00 |  1.713E+00 | N.A.
+ 	 uvel(2,:)= -1.499E+00 |  1.697E+00 | N.A.
+ 	 vvel(1,:)= -1.245E+00 |  1.312E+00 | N.A.
+ 	 vvel(2,:)= -1.097E+00 |  1.234E+00 | N.A.
+ 	hnode(1,:)=  9.543E+00 |  1.026E+01 | N.A.
+ 	hnode(2,:)=  9.543E+00 |  1.026E+01 | N.A.
+ 	     cfl_z=  N.A.      |  3.077E-01 | N.A.
+ 	     pgf_x=  N.A.      |  1.189E-04 | N.A.
+ 	     pgf_y=  N.A.      |  1.297E-04 | N.A.
+ 	        Av=  N.A.      |  1.806E+00 | N.A.
+ 	        Kv=  N.A.      |  2.454E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.493E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.863E-03
+     Oce. Dynamics    : 3.096E-03
+     Oce. Update Vel. : 2.439E-04
+     Oce. Fer-GM.     : 8.409E-04
+     _______________________________
+     ALE-Solve SSH    : 5.260E-03
+     ALE-Calc. hbar   : 1.581E-04
+     ALE-Update+W     : 7.982E-04
+     ALE-Solve Tracer : 1.354E-02
+     ALE-Update hnode : 9.584E-05
+     _______________________________
+     check for blowup : 4.631E-03
+     _______________________________
+     Oce. TOTAL       : 3.453E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:      172800  day:         235  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.364E-03
+	Ice Advect.     : 7.989E-04
+	Ice Thermodyn.  : 6.020E-04
+    _______________________________
+	Ice TOTAL       : 7.765E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      172800
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  8.248028438755336E-016  8.248028438755336E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.72899942769413        1.01980498905424     
+ 	 max(hbar), max(hbar)     =  -1.72899942769413        1.01980498905424     
+ 
+ 	 int(deta), int(dhbar)    =  1.304879421269541E-013 -6.930193334866338E-020
+ 	  --> error(deta-dhbar)   =  1.304880114288875E-013
+ 	  --> error(deta-wflux)   =  1.304879421271137E-013
+ 	  --> error(dhbar-wflux)  = -6.930177373151884E-020
+ 
+ 	 -int(wflux)*dt           =  4.788514336259723E-023
+ 	 int(deta )-int(wflux)*dt =  1.304879420790690E-013
+ 	 int(dhbar)-int(wflux)*dt = -6.934981849202598E-020
+ 
+ 	___global min/max/mean  --> mstep=      172800 ____________
+ 	       eta= -1.729E+00 |  1.020E+00 | N.A.
+ 	      deta= -2.911E-03 |  2.657E-03 | N.A.
+ 	      hbar= -1.729E+00 |  1.020E+00 | N.A.
+ 	     wflux= -1.302E-05 |  1.848E-06 | -1.596E-25
+ 	     hflux= -4.010E+02 |  4.298E+03 |  0.000E+00
+ 	      temp= -1.909E+00 |  3.206E+01 |  0.000E+00
+ 	      salt=  4.137E+00 |  3.950E+01 |  0.000E+00
+ 	 wvel(1,:)= -4.635E-17 |  4.496E-17 | N.A.
+ 	 wvel(2,:)= -1.157E-03 |  8.024E-04 | N.A.
+ 	 uvel(1,:)= -1.505E+00 |  1.483E+00 | N.A.
+ 	 uvel(2,:)= -1.372E+00 |  1.467E+00 | N.A.
+ 	 vvel(1,:)= -9.037E-01 |  1.285E+00 | N.A.
+ 	 vvel(2,:)= -8.795E-01 |  1.231E+00 | N.A.
+ 	hnode(1,:)=  9.560E+00 |  1.025E+01 | N.A.
+ 	hnode(2,:)=  9.560E+00 |  1.025E+01 | N.A.
+ 	     cfl_z=  N.A.      |  3.486E-01 | N.A.
+ 	     pgf_x=  N.A.      |  9.798E-05 | N.A.
+ 	     pgf_y=  N.A.      |  1.211E-04 | N.A.
+ 	        Av=  N.A.      |  1.269E+00 | N.A.
+ 	        Kv=  N.A.      |  1.738E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.493E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.979E-03
+     Oce. Dynamics    : 3.019E-03
+     Oce. Update Vel. : 2.310E-04
+     Oce. Fer-GM.     : 8.581E-04
+     _______________________________
+     ALE-Solve SSH    : 5.973E-03
+     ALE-Calc. hbar   : 1.540E-04
+     ALE-Update+W     : 7.448E-04
+     ALE-Solve Tracer : 1.359E-02
+     ALE-Update hnode : 1.140E-04
+     _______________________________
+     check for blowup : 4.278E-03
+     _______________________________
+     Oce. TOTAL       : 3.494E-02
+ 
+ 
+ Updating SSS restoring data for month            9
+ Updating monthly runoff for month            9
+ sst: current mean I/O counter =            8
+ writing mean record for sst; rec. count =            8
+ vwind: current mean I/O counter =            8
+ writing mean record for vwind; rec. count =            8
+ tx_sur: current mean I/O counter =            8
+ writing mean record for tx_sur; rec. count =            8
+ fw: current mean I/O counter =            8
+ writing mean record for fw; rec. count =            8
+ tair: current mean I/O counter =            8
+ writing mean record for tair; rec. count =            8
+ thdgrsn: current mean I/O counter =            8
+ writing mean record for thdgrsn; rec. count =            8
+ thdgr: current mean I/O counter =            8
+ writing mean record for thdgr; rec. count =            8
+ a_ice: current mean I/O counter =            8
+ writing mean record for a_ice; rec. count =            8
+ vice: current mean I/O counter =            8
+ writing mean record for vice; rec. count =            8
+ iceoce_y: current mean I/O counter =            8
+ writing mean record for iceoce_y; rec. count =            8
+ m_ice: current mean I/O counter =            8
+ writing mean record for m_ice; rec. count =            8
+ fh: current mean I/O counter =            8
+ writing mean record for fh; rec. count =            8
+ MLD2: current mean I/O counter =            8
+ writing mean record for MLD2; rec. count =            8
+ uwind: current mean I/O counter =            8
+ writing mean record for uwind; rec. count =            8
+ m_snow: current mean I/O counter =            8
+ writing mean record for m_snow; rec. count =            8
+ iceoce_x: current mean I/O counter =            8
+ writing mean record for iceoce_x; rec. count =            8
+ MLD1: current mean I/O counter =            8
+ writing mean record for MLD1; rec. count =            8
+ evap: current mean I/O counter =            8
+ writing mean record for evap; rec. count =            8
+ pgf_x: current mean I/O counter =            8
+ writing mean record for pgf_x; rec. count =            8
+ ty_sur: current mean I/O counter =            8
+ writing mean record for ty_sur; rec. count =            8
+ shum: current mean I/O counter =            8
+ writing mean record for shum; rec. count =            8
+ lwr: current mean I/O counter =            8
+ writing mean record for lwr; rec. count =            8
+ temp: current mean I/O counter =            8
+ writing mean record for temp; rec. count =            8
+ ssh: current mean I/O counter =            8
+ writing mean record for ssh; rec. count =            8
+ uice: current mean I/O counter =            8
+ writing mean record for uice; rec. count =            8
+ atmoce_x: current mean I/O counter =            8
+ writing mean record for atmoce_x; rec. count =            8
+ atmice_x: current mean I/O counter =            8
+ writing mean record for atmice_x; rec. count =            8
+ atmice_y: current mean I/O counter =            8
+ writing mean record for atmice_y; rec. count =            8
+ atmoce_y: current mean I/O counter =            8
+ writing mean record for atmoce_y; rec. count =            8
+ v: current mean I/O counter =            8
+ writing mean record for v; rec. count =            8
+ swr: current mean I/O counter =            8
+ writing mean record for swr; rec. count =            8
+ snow: current mean I/O counter =            8
+ writing mean record for snow; rec. count =            8
+ u: current mean I/O counter =            8
+ writing mean record for u; rec. count =            8
+ salt: current mean I/O counter =            8
+ writing mean record for salt; rec. count =            8
+ N2: current mean I/O counter =            8
+ writing mean record for N2; rec. count =            8
+ slope_y: current mean I/O counter =            8
+ writing mean record for slope_y; rec. count =            8
+ alpha: current mean I/O counter =            8
+ writing mean record for alpha; rec. count =            8
+ sss: current mean I/O counter =            8
+ writing mean record for sss; rec. count =            8
+ beta: current mean I/O counter =            8
+ writing mean record for beta; rec. count =            8
+ runoff: current mean I/O counter =            8
+ writing mean record for runoff; rec. count =            8
+ cd: current mean I/O counter =            8
+ writing mean record for cd; rec. count =            8
+ pgf_y: current mean I/O counter =            8
+ writing mean record for pgf_y; rec. count =            8
+ ce: current mean I/O counter =            8
+ writing mean record for ce; rec. count =            8
+ slope_x: current mean I/O counter =            8
+ writing mean record for slope_x; rec. count =            8
+ ch: current mean I/O counter =            8
+ writing mean record for ch; rec. count =            8
+ momix_length: current mean I/O counter =            8
+ writing mean record for momix_length; rec. count =            8
+ prec: current mean I/O counter =            8
+ writing mean record for prec; rec. count =            8
+ slope_z: current mean I/O counter =            8
+ writing mean record for slope_z; rec. count =            8
+ FESOM =======================================================
+ FESOM step:      175680  day:         245  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.287E-03
+	Ice Advect.     : 7.479E-04
+	Ice Thermodyn.  : 6.130E-04
+    _______________________________
+	Ice TOTAL       : 7.648E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      175680
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  7.712442176498497E-016  7.712442176498497E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.65357125300716        1.00928501597688     
+ 	 max(hbar), max(hbar)     =  -1.65357125300716        1.00928501597688     
+ 
+ 	 int(deta), int(dhbar)    =  4.541354829332704E-013 -1.791389597880544E-019
+ 	  --> error(deta-dhbar)   =  4.541356620722302E-013
+ 	  --> error(deta-wflux)   =  4.541354829358243E-013
+ 	  --> error(dhbar-wflux)  = -1.791364059137417E-019
+ 
+ 	 -int(wflux)*dt           =  7.661622938015557E-022
+ 	 int(deta )-int(wflux)*dt =  4.541354821671081E-013
+ 	 int(dhbar)-int(wflux)*dt = -1.799051220818560E-019
+ 
+ 	___global min/max/mean  --> mstep=      175680 ____________
+ 	       eta= -1.654E+00 |  1.009E+00 | N.A.
+ 	      deta= -5.888E-03 |  6.114E-03 | N.A.
+ 	      hbar= -1.654E+00 |  1.009E+00 | N.A.
+ 	     wflux= -2.687E-05 |  2.953E-06 | -2.554E-24
+ 	     hflux= -3.769E+02 |  9.103E+03 |  0.000E+00
+ 	      temp= -1.908E+00 |  3.194E+01 |  0.000E+00
+ 	      salt=  4.537E+00 |  3.951E+01 |  0.000E+00
+ 	 wvel(1,:)= -4.679E-17 |  5.867E-17 | N.A.
+ 	 wvel(2,:)= -1.703E-03 |  1.604E-03 | N.A.
+ 	 uvel(1,:)= -1.654E+00 |  1.629E+00 | N.A.
+ 	 uvel(2,:)= -1.532E+00 |  1.416E+00 | N.A.
+ 	 vvel(1,:)= -1.112E+00 |  1.227E+00 | N.A.
+ 	 vvel(2,:)= -1.020E+00 |  1.180E+00 | N.A.
+ 	hnode(1,:)=  9.569E+00 |  1.027E+01 | N.A.
+ 	hnode(2,:)=  9.569E+00 |  1.027E+01 | N.A.
+ 	     cfl_z=  N.A.      |  2.524E-01 | N.A.
+ 	     pgf_x=  N.A.      |  2.044E-04 | N.A.
+ 	     pgf_y=  N.A.      |  2.386E-04 | N.A.
+ 	        Av=  N.A.      |  1.379E+00 | N.A.
+ 	        Kv=  N.A.      |  2.733E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.493E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.867E-03
+     Oce. Dynamics    : 3.131E-03
+     Oce. Update Vel. : 2.372E-04
+     Oce. Fer-GM.     : 8.252E-04
+     _______________________________
+     ALE-Solve SSH    : 5.639E-03
+     ALE-Calc. hbar   : 1.528E-04
+     ALE-Update+W     : 8.109E-04
+     ALE-Solve Tracer : 1.355E-02
+     ALE-Update hnode : 1.099E-04
+     _______________________________
+     check for blowup : 4.699E-03
+     _______________________________
+     Oce. TOTAL       : 3.503E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:      178560  day:         255  year:        1984
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.203E-03
+	Ice Advect.     : 7.770E-04
+	Ice Thermodyn.  : 5.929E-04
+    _______________________________
+	Ice TOTAL       : 7.573E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=      178560
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      =  8.033793933852601E-016  8.033793933852601E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.71323018071494        1.02528339493036     
+ 	 max(hbar), max(hbar)     =  -1.71323018071494        1.02528339493036     
+ 
+ 	 int(deta), int(dhbar)    = -8.732705239257519E-015  1.059142754951271E-019
+ 	  --> error(deta-dhbar)   = -8.732811153533014E-015
+ 	  --> error(deta-wflux)   = -8.732705239576754E-015
+ 	  --> error(dhbar-wflux)  =  1.059139562608380E-019
+ 
+ 	 -int(wflux)*dt           = -9.577028672519446E-023
+ 	 int(deta )-int(wflux)*dt = -8.732705143487232E-015
+ 	 int(dhbar)-int(wflux)*dt =  1.060100457818522E-019
+ 
+ 	___global min/max/mean  --> mstep=      178560 ____________
+ 	       eta= -1.713E+00 |  1.025E+00 | N.A.
+ 	      deta= -2.780E-03 |  3.461E-03 | N.A.
+ 	      hbar= -1.713E+00 |  1.025E+00 | N.A.
+ 	     wflux= -1.546E-05 |  2.221E-06 |  3.192E-25
+ 	     hflux= -3.659E+02 |  5.231E+03 |  0.000E+00
+ 	      temp= -1.910E+00 |  3.156E+01 |  0.000E+00
+ 	      salt=  4.687E+00 |  3.951E+01 |  0.000E+00
+ 	 wvel(1,:)= -4.665E-17 |  4.341E-17 | N.A.
+ 	 wvel(2,:)= -9.316E-04 |  6.595E-04 | N.A.
+ 	 uvel(1,:)= -1.637E+00 |  1.229E+00 | N.A.
+ 	 uvel(2,:)= -1.546E+00 |  1.225E+00 | N.A.
+ 	 vvel(1,:)= -9.440E-01 |  1.285E+00 | N.A.
+ 	 vvel(2,:)= -8.845E-01 |  1.261E+00 | N.A.
+ 	hnode(1,:)=  9.574E+00 |  1.029E+01 | N.A.
+ 	hnode(2,:)=  9.574E+00 |  1.029E+01 | N.A.
+ 	     cfl_z=  N.A.      |  2.462E-01 | N.A.
+ 	     pgf_x=  N.A.      |  9.716E-05 | N.A.
+ 	     pgf_y=  N.A.      |  9.925E-05 | N.A.
+ 	        Av=  N.A.      |  1.252E+00 | N.A.
+ 	        Kv=  N.A.      |  2.682E+00 | N.A.
+ 	     m_ice=  N.A.      |  1.493E+01 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 6.128E-03
+     Oce. Dynamics    : 2.872E-03
+     Oce. Update Vel. : 2.401E-04
+     Oce. Fer-GM.     : 8.371E-04
+     _______________________________
+     ALE-Solve SSH    : 6.408E-03
+     ALE-Calc. hbar   : 1.569E-04
+     ALE-Update+W     : 8.080E-04
+     ALE-Solve Tracer : 1.349E-02
+     ALE-Update hnode : 1.400E-04
+     _______________________________
+     check for blowup : 4.559E-03
+     _______________________________
+     Oce. TOTAL       : 3.564E-02
+ 
+ 
