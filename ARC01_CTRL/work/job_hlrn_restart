@@ -1,0 +1,67 @@
+#!/bin/bash
+#SBATCH --job-name=CTRL
+#SBATCH --partition=standard96
+#SBATCH --ntasks=2304      ######2304
+#SBATCH --ntasks-per-node=96
+#SBATCH --time=12:00:00
+#SBATCH -o slurm-out.out
+#SBATCH -e slurm-err.out
+#SBATCH --account=hbk00087
+
+## modules HLRN
+module purge
+module load slurm
+module load HLRNenv
+module load sw.skl
+module load cmake
+module load cdo nco
+#module load intel/19.0.5
+#module load impi/2019.5
+module load intel/18.0.6
+module load impi/2018.5
+export PSM2_MULTI_EP=0
+
+set -x
+
+ulimit -s unlimited
+
+# determine JOBID
+JOBID=`echo $SLURM_JOB_ID |cut -d"." -f1`
+
+ln -s ../../bin/fesom.x .           # cp -n ../bin/fesom.x
+cp -n ../config/namelist.config  .
+cp -n ../config/namelist.forcing .
+cp -n ../config/namelist.oce     .
+cp -n ../config/namelist.ice     .
+cp -n ../config/namelist.io     .
+cp -n ../config/namelist.cvmix .
+cp -n ../config/namelist.icepack .
+
+date
+srun --mpi=pmi2 ./fesom.x > "fesom2.0.out"
+date
+
+# qstat -f $PBS_JOBID
+
+#export EXITSTATUS=$?
+#if [ ${EXITSTATUS} -eq 0 ] || [ ${EXITSTATUS} -eq 127 ] ; then
+#sbatch job.ll_ollie
+#fi#
+#exit
+
+# exit after 2020
+
+#Resultpath='/scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results2/CTRL'
+#test -e $Resultpath/fesom.2019.oce.restart.nc && exit
+
+#IsInFile=$( tail -1 fesom2.0.out | grep -c should)
+#if (( IsInFile > 0 )); then
+ # submit next #job
+# echo "submitting next job"
+# cp fesom2.0.out fesom.out.done
+# sbatch job_hlrn
+#else
+# echo "something is wrong, last line of fesom.out reads"
+# echo $( tail -1 fesom2.0.out)
+# echo "abnormal termination of job script"
+#fi
