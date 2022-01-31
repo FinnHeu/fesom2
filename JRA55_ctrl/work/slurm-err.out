@@ -8,9 +8,9 @@ Module for nco 4.9.1 loaded.
 Module for Intel Parallel Studio XE Composer Edition (version 2018 Update 5) loaded.
 Module for Intel-MPI (version 2018.5) loaded.
 + ulimit -s unlimited
-++ echo 6368472
+++ echo 6371625
 ++ cut -d. -f1
-+ JOBID=6368472
++ JOBID=6371625
 + ln -s ../../bin/fesom.x .
 ln: failed to create symbolic link ‘./fesom.x’: File exists
 + cp -n ../config/namelist.config .
@@ -23,11 +23,23 @@ ln: failed to create symbolic link ‘./fesom.x’: File exists
 + date
 + srun --mpi=pmi2 ./fesom.x
 srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** STEP 6368472.0 ON bcn1098 CANCELLED AT 2022-01-26T13:44:24 ***
-slurmstepd: error: *** JOB 6368472 ON bcn1098 CANCELLED AT 2022-01-26T13:44:24 ***
+slurmstepd: error: *** STEP 6371625.0 ON bcn1961 CANCELLED AT 2022-01-28T10:18:14 ***
+slurmstepd: error: *** JOB 6371625 ON bcn1961 CANCELLED AT 2022-01-28T10:18:14 ***
 
-fesom.x:87234 terminated with signal 11 at PC=2aab1105ecc2 SP=2aab15bdc858.  Backtrace:
-/lib64/libpsm2.so.2(+0x58cc2)[0x2aab1105ecc2]
+fesom.x:423783 terminated with signal 11 at PC=2aab1105e11d SP=2aab15bdc858.  Backtrace:
+/lib64/libpsm2.so.2(+0x5811d)[0x2aab1105e11d]
+/lib64/libpsm2.so.2(+0x49098)[0x2aab1104f098]
+/lib64/libpsm2.so.2(+0x223fe)[0x2aab110283fe]
+/lib64/libpsm2.so.2(+0x4268d)[0x2aab1104868d]
+/lib64/libpsm2.so.2(+0x2b25e)[0x2aab1103125e]
+/lib64/libpsm2.so.2(+0x28084)[0x2aab1102e084]
+/lib64/libpsm2.so.2(+0x25f3f)[0x2aab1102bf3f]
+/lib64/libpsm2.so.2(+0x298a0)[0x2aab1102f8a0]
+/lib64/libpthread.so.0(+0x7ea5)[0x2aaab4a41ea5]
+/lib64/libc.so.6(clone+0x6d)[0x2aaab4d54b0d]
+
+fesom.x:518843 terminated with signal 11 at PC=2aab1105e11d SP=2aab15bdc858.  Backtrace:
+/lib64/libpsm2.so.2(+0x5811d)[0x2aab1105e11d]
 /lib64/libpsm2.so.2(+0x49098)[0x2aab1104f098]
 /lib64/libpsm2.so.2(+0x223fe)[0x2aab110283fe]
 /lib64/libpsm2.so.2(+0x4268d)[0x2aab1104868d]

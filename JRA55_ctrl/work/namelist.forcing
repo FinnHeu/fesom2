@@ -49,12 +49,9 @@ landice_end_mon=10
    nm_nc_idd     = 1            ! initial day of time axis in netCDF
    nm_nc_freq    = 1            ! data points per day (i.e. 86400 if the time axis is in seconds)
    nm_nc_tmid    = 0            ! 1 if the time stamps are given at the mid points of the netcdf file, 0 otherwise (i.e. 1 in CORE1, CORE2; 0 in JRA55)
-   l_xwind=.true. l_ywind=.true. l_humi=.true. l_qsr=.true. l_qlw=.true. l_tair=.true. l_prec=.true. l_mslp=.false. l_cloud=.false. l_snow=.true.
-   nm_runoff_file     ='/home/hbkfheuk/mesh/Arc01/forcing_data_on_grid/runoff_clim.nc'
-   runoff_data_source ='Dai09'	!Dai09, CORE2
-   runoff_climatology =.true.
+   l_xwind=.true. l_ywind=.true. l_humi=.true. l_qsr=.true. l_qlw=.true. l_tair=.true. l_prec=.true. l_mslp=.true. l_cloud=.false. l_snow=.true.
    nm_runoff_file     ='/scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/runoff/'
-   runoff_data_source ='JRA55'  !Dai09, CORE2
+   runoff_data_source ='Dai09'	!Dai09, CORE2
    runoff_climatology =.false.
    nm_sss_data_file   ='/scratch/usr/hbkawi/forcing/CORE2/PHC2_salx.nc'
    sss_data_source    ='CORE2'
