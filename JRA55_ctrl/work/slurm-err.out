@@ -8,9 +8,9 @@ Module for nco 4.9.1 loaded.
 Module for Intel Parallel Studio XE Composer Edition (version 2018 Update 5) loaded.
 Module for Intel-MPI (version 2018.5) loaded.
 + ulimit -s unlimited
-++ echo 6371625
+++ echo 6385561
 ++ cut -d. -f1
-+ JOBID=6371625
++ JOBID=6385561
 + ln -s ../../bin/fesom.x .
 ln: failed to create symbolic link ‘./fesom.x’: File exists
 + cp -n ../config/namelist.config .
@@ -22,30 +22,60 @@ ln: failed to create symbolic link ‘./fesom.x’: File exists
 + cp -n ../config/namelist.icepack .
 + date
 + srun --mpi=pmi2 ./fesom.x
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** STEP 6371625.0 ON bcn1961 CANCELLED AT 2022-01-28T10:18:14 ***
-slurmstepd: error: *** JOB 6371625 ON bcn1961 CANCELLED AT 2022-01-28T10:18:14 ***
 
-fesom.x:423783 terminated with signal 11 at PC=2aab1105e11d SP=2aab15bdc858.  Backtrace:
-/lib64/libpsm2.so.2(+0x5811d)[0x2aab1105e11d]
-/lib64/libpsm2.so.2(+0x49098)[0x2aab1104f098]
-/lib64/libpsm2.so.2(+0x223fe)[0x2aab110283fe]
-/lib64/libpsm2.so.2(+0x4268d)[0x2aab1104868d]
-/lib64/libpsm2.so.2(+0x2b25e)[0x2aab1103125e]
-/lib64/libpsm2.so.2(+0x28084)[0x2aab1102e084]
-/lib64/libpsm2.so.2(+0x25f3f)[0x2aab1102bf3f]
-/lib64/libpsm2.so.2(+0x298a0)[0x2aab1102f8a0]
-/lib64/libpthread.so.0(+0x7ea5)[0x2aaab4a41ea5]
-/lib64/libc.so.6(clone+0x6d)[0x2aaab4d54b0d]
+fesom.x:313595 terminated with signal 11 at PC=507387 SP=7fffffff3080.  Backtrace:
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x507387]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x46c0e5]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x460fe3]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d75e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d669]
 
-fesom.x:518843 terminated with signal 11 at PC=2aab1105e11d SP=2aab15bdc858.  Backtrace:
-/lib64/libpsm2.so.2(+0x5811d)[0x2aab1105e11d]
-/lib64/libpsm2.so.2(+0x49098)[0x2aab1104f098]
-/lib64/libpsm2.so.2(+0x223fe)[0x2aab110283fe]
-/lib64/libpsm2.so.2(+0x4268d)[0x2aab1104868d]
-/lib64/libpsm2.so.2(+0x2b25e)[0x2aab1103125e]
-/lib64/libpsm2.so.2(+0x28084)[0x2aab1102e084]
-/lib64/libpsm2.so.2(+0x25f3f)[0x2aab1102bf3f]
-/lib64/libpsm2.so.2(+0x298a0)[0x2aab1102f8a0]
-/lib64/libpthread.so.0(+0x7ea5)[0x2aaab4a41ea5]
-/lib64/libc.so.6(clone+0x6d)[0x2aaab4d54b0d]
+fesom.x:605297 terminated with signal 11 at PC=507387 SP=7fffffff3080.  Backtrace:
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x507387]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x46c0e5]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x460fe3]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d75e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d669]
+
+fesom.x:289759 terminated with signal 11 at PC=507387 SP=7fffffff3000.  Backtrace:
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x507387]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x46c0e5]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x460fe3]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d75e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d669]
+srun: error: bcn2144: task 2088: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=6385561.0
+srun: error: bcn1550: task 1018: Exited with exit code 1
+srun: error: bcn1538: task 402: Exited with exit code 1
+slurmstepd: error: *** STEP 6385561.0 ON bcn1530 CANCELLED AT 2022-02-05T15:53:01 ***
+srun: error: bcn1538: tasks 384-401,403-479: Exited with exit code 1
+srun: error: bcn1550: tasks 960-1017,1019-1055: Exited with exit code 1
+srun: error: bcn2142: tasks 1920-2015: Exited with exit code 1
+srun: error: bcn1554: tasks 1152-1247: Exited with exit code 1
+srun: error: bcn1546: tasks 768-863: Exited with exit code 1
+srun: error: bcn1542: tasks 576-671: Exited with exit code 1
+srun: error: bcn1534: tasks 192-287: Exited with exit code 1
+srun: error: bcn1540: tasks 480-575: Exited with exit code 1
+srun: error: bcn2138: tasks 1824-1919: Exited with exit code 1
+srun: error: bcn2132: tasks 1728-1823: Exited with exit code 1
+srun: error: bcn1552: tasks 1056-1151: Exited with exit code 1
+srun: error: bcn1544: tasks 672-767: Exited with exit code 1
+srun: error: bcn1548: tasks 864-959: Exited with exit code 1
+srun: error: bcn1536: tasks 288-383: Exited with exit code 1
+srun: error: bcn2144: tasks 2016-2087,2089-2111: Exited with exit code 1
+srun: error: bcn1532: tasks 96-191: Exited with exit code 1
+srun: error: bcn1556: tasks 1248-1343: Exited with exit code 1
+srun: error: bcn2148: tasks 2208-2303: Exited with exit code 1
+srun: error: bcn1558: tasks 1344-1439: Exited with exit code 1
+srun: error: bcn1616: tasks 1536-1631: Exited with exit code 1
+srun: error: bcn2146: tasks 2112-2207: Exited with exit code 1
+srun: error: bcn1768: tasks 1632-1727: Exited with exit code 1
+srun: error: bcn1530: tasks 0-95: Exited with exit code 1
+srun: error: bcn1560: tasks 1440-1535: Exited with exit code 1
++ date
++ Resultpath=/scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/CTRL
++ test -e /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/CTRL/fesom.2019.oce.restart.nc
++ exit

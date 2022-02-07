@@ -1,0 +1,354 @@
+ MPI has been initialized, provided MPI thread support level: MPI_THREAD_MULTIPLE           3
+ Running on         2304  PEs
+ 
+ FESOM2 git SHA: 66c24dd
+ MPI library version: Intel(R) MPI Library 2018 Update 5 for Linux* OS
+
+ [32m____________________________________________________________[0m
+ [7;32m --> FESOM BUILDS UP MODEL CONFIGURATION                    [0m
+ Namelist files are read in
+ time step size is set to    300.000000000000      sec
+ 
+ [31m____________________________________________________________[0m
+ [5;7;31m --> THIS IS A RESTART RUN !!!                              [0m
+     > clock restarted at time: 0.00   1 1968
+ 
+      526176  steps to run for fesom job submission
+ rotation matrix for rotated model grids prepared
+           0 rpart is read
+ myLists are read
+ reading /home/hbkfheuk/mesh/Arc01/nod2d.out
+ reading /home/hbkfheuk/mesh/Arc01/elem2d.out
+ elements are read
+ communication arrays are read
+ =========================
+ 2D mesh was read in    2.31042504310608       seconds
+ 2D mesh info : nod2D=      753179  elem2D=     1480268 checksum= dcb6e1eb09b78032927737c888d50aa8
+ =========================
+ Communication arrays are set
+ test_tri finished in   1.502037048339844E-005  seconds
+ =========================
+ reading /home/hbkfheuk/mesh/Arc01/edgenum.out
+ 2D mesh info : edge2D=     2233743
+ reading /home/hbkfheuk/mesh/Arc01/edges.out
+ reading /home/hbkfheuk/mesh/Arc01/edge_tri.out
+ load_edges finished in    2.00157308578491       seconds
+ =========================
+ find_neighbors finished in   8.399963378906250E-003  seconds
+ =========================
+ reading /home/hbkfheuk/mesh/Arc01/elvls.out
+ reading /home/hbkfheuk/mesh/Arc01/nlvls.out
+ ____________________________________________________________________
+  --> 3D mesh was read in   0.790431976318359       seconds
+  --> Min/max depth on mype :            0   2400.00000000000        2900.00000000000     
+ ____________________________________________________________________
+  --> find min/max level e2n in  1.060962677001953E-004  seconds
+ ____________________________________________________________________
+  --> mesh statistics:           0
+           0 maxArea    19833231.5735569         MinArea    5910088.04922585     
+           0 maxScArea    45910948.8000483         MinScArea    10957515.8214999     
+           0 Edges:         2233743  internal      2207061
+      > Total ocean surface area is           :    364670481234894.       m^2
+      > Total ocean surface area wth cavity is:    364670481234894.       m^2
+      > mesh_areas finished in   2.391099929809570E-003  seconds
+ mesh_auxiliary_arrays finished in   1.302003860473633E-003  seconds
+ =========================
+ FESOM mesh_setup... complete
+ ***start level area_test***
+   364670481234894.        364670481234894.     
+   364670481234894.        364670481234894.     
+   364670481234894.        364670481234894.     
+   364670481234894.        364670481234894.     
+   357344131382841.        357344131382841.     
+   354738450574708.        354738450574708.     
+   352989911577677.        352989911577677.     
+   351500050699065.        351500050699065.     
+   350503117220912.        350503117220912.     
+   349460782371209.        349460782371209.     
+   348340323959357.        348340323959357.     
+   346974799892124.        346974799892124.     
+   345520489374689.        345520489374689.     
+   343933649098369.        343933649098369.     
+   342091920203016.        342091920203016.     
+   340193212762796.        340193212762796.     
+   337981406188926.        337981406188926.     
+   335794161200053.        335794161200053.     
+   333475363839453.        333475363839453.     
+   331287979144437.        331287979144437.     
+   329197833729615.        329197833729615.     
+   327184064857848.        327184064857848.     
+   325220351420586.        325220351420586.     
+   323247686716555.        323247686716555.     
+   321115901987589.        321115901987589.     
+   318816350526861.        318816350526861.     
+   316173442247272.        316173442247272.     
+   313226996724511.        313226996724511.     
+   309239135184880.        309239135184880.     
+   304720736254936.        304720736254936.     
+   299161521019338.        299161521019338.     
+   292934682882810.        292934682882810.     
+   284899215102633.        284899215102633.     
+   273017670904357.        273017670904357.     
+   256486676268161.        256486676268161.     
+   234901372820550.        234901372820550.     
+   210183958468668.        210183958468668.     
+   182465631876249.        182465631876249.     
+   152296401563806.        152296401563806.     
+   121974662577379.        121974662577379.     
+   93128237131034.1        93128237131034.2     
+   64627173366718.9        64627173366718.9     
+   37142301749070.1        37142301749070.1     
+   15721269380646.8        15721269380646.8     
+   4747121672793.51        4747121672793.51     
+  0.000000000000000E+000  0.000000000000000E+000
+ ***end level area_test***
+ ____________________________________________________________
+  --> initialise ALE arrays + sparse SSH stiff matrix
+ 
+ ____________________________________________________________
+  --> initialise ssh operator using unperturbed ocean depth
+      > in stiff_mat_ale, reading /home/hbkfheuk/mesh/Arc01/dist_2304/rpart.out
+      took:   9.845709800720215E-002  sec
+ 
+ ____________________________________________________________
+  --> initialise CVMIX_TKE
+ 
+      tke_only       =  F
+      tke_c_k        =   0.100000000000000     
+      tke_c_eps      =   0.700000000000000     
+      tke_alpha      =    30.0000000000000     
+      tke_cd         =    3.75000000000000     
+      tke_surf_min   =   1.000000000000000E-004
+      tke_min        =   1.000000000000000E-006
+      tke_kappaM_min =   0.000000000000000E+000
+      tke_kappaM_max =    100.000000000000     
+      tke_mxl_choice =            2
+ 
+ ____________________________________________________________
+  --> initialise IDEMIX
+ 
+      idemix_tau_v        =    86400.0000000000     
+      idemix_tau_h        =    1296000.00000000     
+      idemix_gamma        =    1.57000000000000     
+      idemix_jstar        =    10.0000000000000     
+      idemix_mu0          =    1.33333333000000     
+      idemix_n_hor_iwe_...=            5
+      idemix_surforc_file = /scratch/usr/hbkawi/IDEMIX/fourier_smooth_2005_cfsr_inert_rgrid.nc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      idemix_botforc_file = /scratch/usr/hbkawi/IDEMIX/tidal_energy_gx1v6_20090205_rgrid.nc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+ 
+  --> read IDEMIX near inertial wave surface forcing
+  --> read IDEMIX near tidal bottom forcing
+ Arrays are set
+ FCT is initialized
+           2  tracers will be used in FESOM
+ tracer IDs are:            0           1
+ read Temperatur climatology from:phc3.0_winter.nc
+ read Salt       climatology from:phc3.0_winter.nc
+ Start: Initial conditions  for tracers
+ reading input tracer file for tracer ID=            1
+ input file: /home/hbkfheuk/hydrography/phc3.0/phc3.0_winter.nc
+ variable  : salt
+ reading input tracer file for tracer ID=            0
+ input file: /home/hbkfheuk/hydrography/phc3.0/phc3.0_winter.nc
+ variable  : temp
+ converting insitu temperature to potential...
+ DONE:  Initial conditions for tracers
+   |-> gobal max init. temp. =   30.0731735855567     
+   |-> gobal min init. temp. =  -2.05843139276997     
+   |-> gobal max init. salt. =   39.2055735828008     
+   `-> gobal min init. salt. =   5.63086681505307     
+ ____________________________________________________________
+  --> call init_thickness_ale
+ 
+ ____________________________________________________________
+  --> initialise ALE layerthicknesses, depth levels and middepth levels
+ 
+ Initial state
+ ******************************************************************************
+ vertical velocity will be split onto explicit and implicit constitutes;
+ maximum allowed CDF on explicit W is set to:    1.00000000000000     
+ ******************************************************************************
+ FESOM ocean_setup... complete
+ ****************************************************
+ forcing arrays have been set up
+      file   : namelist_bc.nml open ok
+ Start: Ocean forcing inizialization.
+ Start: Ocean forcing inizialization.
+ Surface boundary conditions parameters:
+       nm_xwind_file = /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/uas. ! name of file with X winds
+       nm_xwind_var  = uas ! name of variable in file with wind 
+       nm_ywind_file = /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/vas. ! name of file with Y winds
+       nm_ywind_var  = vas ! name of variable in file with wind 
+       nm_humi_file = /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/huss. ! name of file with humidity
+       nm_humi_var   = huss ! name of variable in file with humidity  
+       nm_qsr_file = /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/rsds. ! name of file with solar heat 
+       nm_qsr_var  = rsds ! name of variable in file with solar heat 
+       nm_qlw_file   = /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/rlds. ! name of file with Long wave 
+       nm_qlw_var    = rlds ! name of variable in file with Long wave 
+       nm_tair_file  = /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/tas. ! name of file with 2m air temperature 
+       nm_tair_var   = tas ! name of variable in file with 2m air temperature 
+       nm_prec_file  = /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/prra. ! name of file with total precipitation 
+       nm_prec_var   = prra ! name of variable in file with total precipitation  
+       nm_snow_file  = /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/prsn. ! name of file with snow precipitation 
+       nm_snow_var   = prsn !name of variable in file with air_pressure_at_sea_level 
+       nm_mslp_file  = /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/psl. !air_pressure_at_sea_level 
+       nm_mslp_var   = psl !name of variable in file with air_pressure_at_sea_level 
+ total fluxes to read:            9
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+ WARNING: no temporal extrapolation back in time (nearest neighbour is used): uas !
+ /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/uas.1968.nc
+   2439857.06250000        2440222.90625000        2439857.00000000     
+ WARNING: no temporal extrapolation back in time (nearest neighbour is used): vas !
+ /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/vas.1968.nc
+   2439857.06250000        2440222.90625000        2439857.00000000     
+ WARNING: no temporal extrapolation back in time (nearest neighbour is used): huss !
+ /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/huss.1968.nc
+   2439857.06250000        2440222.90625000        2439857.00000000     
+ WARNING: no temporal extrapolation back in time (nearest neighbour is used): rsds !
+ /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/rsds.1968.nc
+   2439857.12500000        2440222.96875000        2439857.00000000     
+ WARNING: no temporal extrapolation back in time (nearest neighbour is used): rlds !
+ /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/rlds.1968.nc
+   2439857.12500000        2440222.96875000        2439857.00000000     
+ WARNING: no temporal extrapolation back in time (nearest neighbour is used): tas !
+ /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/tas.1968.nc
+   2439857.06250000        2440222.90625000        2439857.00000000     
+ WARNING: no temporal extrapolation back in time (nearest neighbour is used): prra !
+ /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/prra.1968.nc
+   2439857.12500000        2440222.96875000        2439857.00000000     
+ WARNING: no temporal extrapolation back in time (nearest neighbour is used): prsn !
+ /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/prsn.1968.nc
+   2439857.12500000        2440222.96875000        2439857.00000000     
+ WARNING: no temporal extrapolation back in time (nearest neighbour is used): psl !
+ /scratch/projects/hbk00087/hbkfheuk/forcing/JRA55/psl.1968.nc
+   2439857.06250000        2440222.90625000        2439857.00000000     
+ DONE:  Ocean forcing inizialization.
+ Parts of forcing data (only constant in time fields) are read
+ Ice FCT is initialized
+ initialize the sea ice
+ Ice is initialized
+ EVP scheme option=           1
+ associating restart file /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results4/CTRL/fesom.1967.oce.restart.nc
+ current restart counter =            1
+      reading restart file:  /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results4/CTRL/fesom.1967.oce.restart.nc
+ restart from record            1  of            1
+ reading restart for ssh
+ reading restart for hbar
+ reading restart for ssh_rhs_old
+ reading restart for hnode
+ reading restart for u
+ reading restart for v
+ reading restart for urhs_AB
+ reading restart for vrhs_AB
+ reading restart for temp
+ reading restart for temp_AB
+ reading restart for salt
+ reading restart for salt_AB
+ reading restart for w
+ reading restart for w_expl
+ reading restart for w_impl
+ associating restart file /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results4/CTRL/fesom.1967.ice.restart.nc
+ current restart counter =            1
+      reading restart file:  /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results4/CTRL/fesom.1967.ice.restart.nc
+ restart from record            1  of            1
+ reading restart for area
+ reading restart for hice
+ reading restart for hsnow
+ reading restart for uice
+ reading restart for vice
+ ____________________________________________________________
+  --> restart ALE layerthicknesses, depth levels and middepth levels
+ 
+ ==========================================
+ MODEL SETUP took on mype=0 [seconds]      
+ runtime setup total         197.1580    
+  > runtime setup mesh       5.674192    
+  > runtime setup ocean      3.079248    
+  > runtime setup forcing    3.621702    
+  > runtime setup ice       3.1185150E-04
+  > runtime setup restart    184.7823    
+  > runtime setup other     2.2315979E-04
+ ============================================
+ FESOM start iteration before the barrier...
+ FESOM start iteration after the barrier...
+ 
+ [32m____________________________________________________________[0m
+ [7;32m --> FESOM STARTS TIME LOOP                                 [0m
+ Updating SSS restoring data for month            1
+ Updating monthly runoff for month            1
+      file   : namelist.io open ok
+ io_listsize will be changed from          100  to           40 !
+ adding I/O stream 2D for sst
+ stream sss	            is not defined !
+ stream ssh	            is not defined !
+ adding I/O stream 2D for uice
+ adding I/O stream 2D for vice
+ adding I/O stream 2D for a_ice
+ adding I/O stream 2D for m_ice
+ adding I/O stream 2D for thdgr
+ adding I/O stream 2D for thdgrsn
+ adding I/O stream 2D for m_snow
+ adding I/O stream 2D for MLD1
+ adding I/O stream 2D for MLD2
+ adding I/O stream 2D for fh
+ adding I/O stream 2D for fw
+ adding I/O stream 2D for atmice_x
+ adding I/O stream 2D for atmice_y
+ adding I/O stream 2D for atmoce_x
+ adding I/O stream 2D for atmoce_y
+ adding I/O stream 2D for iceoce_x
+ adding I/O stream 2D for iceoce_y
+ adding I/O stream 2D for evap
+ stream precip          is not defined !
+ adding I/O stream 2D for tair
+ adding I/O stream 2D for shum
+ adding I/O stream 2D for swr
+ adding I/O stream 2D for lwr
+ adding I/O stream 2D for uwind
+ adding I/O stream 2D for vwind
+ adding I/O stream 2D for tx_sur
+ adding I/O stream 2D for ty_sur
+ adding I/O stream 3D for temp
+ adding I/O stream 3D for salt
+ adding I/O stream 3D for N2
+ adding I/O stream 3D for u
+ adding I/O stream 3D for v
+ adding I/O stream 3D for w
+ stream ist             is not defined !
+ stream qsi             is not defined !
+ stream qso             is not defined !
+ adding I/O stream 3D for tke
+ adding I/O stream 3D for tke_Ttot
+ adding I/O stream 3D for tke_Tbpr
+ adding I/O stream 3D for tke_Tspr
+ adding I/O stream 3D for tke_Tdif
+ adding I/O stream 3D for tke_Tdis
+ adding I/O stream 3D for tke_Twin
+ adding I/O stream 3D for tke_Tbck
+ adding I/O stream 3D for tke_Lmix
+ adding I/O stream 3D for tke_Pr
+ adding I/O stream 3D for tke_Tiwf
+ adding I/O stream 3D for iwe
+ adding I/O stream 3D for iwe_Ttot
+ adding I/O stream 3D for iwe_Tdif
+ adding I/O stream 3D for iwe_Tdis
+ adding I/O stream 3D for iwe_Tsur
+ adding I/O stream 3D for iwe_Tbot
+ adding I/O stream 3D for iwe_c0
+ adding I/O stream 3D for iwe_v0
+ adding I/O stream 3D for Redi_K
+ adding I/O stream 2D for momix_length
+ adding I/O stream 2D for prec
+ adding I/O stream 2D for snow
+ adding I/O stream 2D for runoff
+ adding I/O stream 2D for cd
+ adding I/O stream 2D for ch
+ adding I/O stream 2D for ce
