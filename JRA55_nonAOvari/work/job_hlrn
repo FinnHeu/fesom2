@@ -51,7 +51,7 @@ date
 
 # exit after 2020
 
-Resultpath='/scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/CTRL'
+Resultpath='/scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/nonAOvari'
 test -e $Resultpath/fesom.2019.oce.restart.nc && exit
 
 IsInFile=$( tail -1 fesom2.0.out | grep -c should)
@@ -68,5 +68,3 @@ else
  echo $( tail -1 fesom2.0.out)
  echo "abnormal termination of job script"
 fi
-
-
