@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=AOvari
+#SBATCH --job-name=CTRL
 #SBATCH --partition=standard96
 #SBATCH --ntasks=2304      ######2304
 #SBATCH --ntasks-per-node=96
@@ -51,7 +51,7 @@ date
 
 # exit after 2020
 
-Resultpath='/scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results2/AOvari'
+Resultpath='/scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/AOvari'
 test -e $Resultpath/fesom.2019.oce.restart.nc && exit
 
 IsInFile=$( tail -1 fesom2.0.out | grep -c should)
@@ -61,6 +61,9 @@ if (( IsInFile > 0 )); then
  cp fesom2.0.out fesom.out.done
  sbatch job_hlrn
 else
+ # copy	work and src to	resultpath
+ cp -r ../work/	$Resultpath
+ cp -r ../../src/ $Resultpath
  echo "something is wrong, last line of fesom.out reads"
  echo $( tail -1 fesom2.0.out)
  echo "abnormal termination of job script"
