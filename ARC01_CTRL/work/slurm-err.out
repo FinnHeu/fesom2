@@ -23,3 +23,12 @@ ln: failed to create symbolic link ‘./fesom.x’: File exists
 cp: cannot stat ‘../config/namelist.icepack’: No such file or directory
 + date
 + srun --mpi=pmi2 ./fesom.x
++ date
++ Resultpath=/scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results4/CTRL
+++ tail -1 fesom2.0.out
+++ grep -c should
++ IsInFile=1
++ ((  IsInFile > 0  ))
++ echo 'submitting next job'
++ cp fesom2.0.out fesom.out.done
++ sbatch job_hlrn_restart
