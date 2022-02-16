@@ -1,0 +1,990 @@
+ MPI has been initialized, provided MPI thread support level: MPI_THREAD_MULTIPLE           3
+ Running on         2304  PEs
+ 
+ FESOM2 git SHA: 66c24dd
+ MPI library version: Intel(R) MPI Library 2018 Update 5 for Linux* OS
+
+ [32m____________________________________________________________[0m
+ [7;32m --> FESOM BUILDS UP MODEL CONFIGURATION                    [0m
+ Namelist files are read in
+ time step size is set to    30.0000000000000      sec
+ 
+ [31m____________________________________________________________[0m
+ [5;7;31m --> THIS IS A RESTART RUN !!!                              [0m
+     > clock restarted at time: 0.00 121 1959
+ 
+       89280  steps to run for fesom job submission
+ rotation matrix for rotated model grids prepared
+           0 rpart is read
+ myLists are read
+ reading /home/hbkfheuk/mesh/Arc01/nod2d.out
+ reading /home/hbkfheuk/mesh/Arc01/elem2d.out
+ elements are read
+ communication arrays are read
+ =========================
+ 2D mesh was read in    14.2880601882935       seconds
+ 2D mesh info : nod2D=      753179  elem2D=     1480268 checksum= dcb6e1eb09b78032927737c888d50aa8
+ =========================
+ Communication arrays are set
+ test_tri finished in   1.597404479980469E-005  seconds
+ =========================
+ reading /home/hbkfheuk/mesh/Arc01/edgenum.out
+ 2D mesh info : edge2D=     2233743
+ reading /home/hbkfheuk/mesh/Arc01/edges.out
+ reading /home/hbkfheuk/mesh/Arc01/edge_tri.out
+ load_edges finished in    1.93398594856262       seconds
+ =========================
+ find_neighbors finished in   8.412837982177734E-003  seconds
+ =========================
+ reading /home/hbkfheuk/mesh/Arc01/elvls.out
+ reading /home/hbkfheuk/mesh/Arc01/nlvls.out
+ ____________________________________________________________________
+  --> 3D mesh was read in   0.759244918823242       seconds
+  --> Min/max depth on mype :            0   2400.00000000000        2900.00000000000     
+ ____________________________________________________________________
+  --> find min/max level e2n in  1.039505004882812E-004  seconds
+ ____________________________________________________________________
+  --> mesh statistics:           0
+           0 maxArea    19833231.5735569         MinArea    5910088.04922585     
+           0 maxScArea    45910948.8000483         MinScArea    10957515.8214999     
+           0 Edges:         2233743  internal      2207061
+      > Total ocean surface area is           :    364670481234894.       m^2
+      > Total ocean surface area wth cavity is:    364670481234894.       m^2
+      > mesh_areas finished in   2.658843994140625E-003  seconds
+ mesh_auxiliary_arrays finished in   1.308917999267578E-003  seconds
+ =========================
+ FESOM mesh_setup... complete
+ ***start level area_test***
+   364670481234894.        364670481234894.     
+   364670481234894.        364670481234894.     
+   364670481234894.        364670481234894.     
+   364670481234894.        364670481234894.     
+   357344131382841.        357344131382841.     
+   354738450574708.        354738450574708.     
+   352989911577677.        352989911577677.     
+   351500050699065.        351500050699065.     
+   350503117220912.        350503117220912.     
+   349460782371209.        349460782371209.     
+   348340323959357.        348340323959357.     
+   346974799892124.        346974799892124.     
+   345520489374689.        345520489374689.     
+   343933649098369.        343933649098369.     
+   342091920203016.        342091920203016.     
+   340193212762796.        340193212762796.     
+   337981406188926.        337981406188926.     
+   335794161200053.        335794161200053.     
+   333475363839453.        333475363839453.     
+   331287979144437.        331287979144437.     
+   329197833729615.        329197833729615.     
+   327184064857848.        327184064857848.     
+   325220351420586.        325220351420586.     
+   323247686716555.        323247686716555.     
+   321115901987589.        321115901987589.     
+   318816350526861.        318816350526861.     
+   316173442247272.        316173442247272.     
+   313226996724511.        313226996724511.     
+   309239135184880.        309239135184880.     
+   304720736254936.        304720736254936.     
+   299161521019338.        299161521019338.     
+   292934682882810.        292934682882810.     
+   284899215102633.        284899215102633.     
+   273017670904357.        273017670904357.     
+   256486676268161.        256486676268161.     
+   234901372820550.        234901372820550.     
+   210183958468668.        210183958468668.     
+   182465631876249.        182465631876249.     
+   152296401563806.        152296401563806.     
+   121974662577379.        121974662577379.     
+   93128237131034.1        93128237131034.2     
+   64627173366718.9        64627173366718.9     
+   37142301749070.1        37142301749070.1     
+   15721269380646.8        15721269380646.8     
+   4747121672793.51        4747121672793.51     
+  0.000000000000000E+000  0.000000000000000E+000
+ ***end level area_test***
+ ____________________________________________________________
+  --> initialise ALE arrays + sparse SSH stiff matrix
+ 
+ ____________________________________________________________
+  --> initialise ssh operator using unperturbed ocean depth
+      > in stiff_mat_ale, reading /home/hbkfheuk/mesh/Arc01/dist_2304/rpart.out
+      took:   9.893584251403809E-002  sec
+ 
+ ____________________________________________________________
+  --> initialise CVMIX_TKE
+ 
+      tke_only       =  F
+      tke_c_k        =   0.100000000000000     
+      tke_c_eps      =   0.700000000000000     
+      tke_alpha      =    30.0000000000000     
+      tke_cd         =    3.75000000000000     
+      tke_surf_min   =   1.000000000000000E-004
+      tke_min        =   1.000000000000000E-006
+      tke_kappaM_min =   0.000000000000000E+000
+      tke_kappaM_max =    100.000000000000     
+      tke_mxl_choice =            2
+ 
+ ____________________________________________________________
+  --> initialise IDEMIX
+ 
+      idemix_tau_v        =    86400.0000000000     
+      idemix_tau_h        =    1296000.00000000     
+      idemix_gamma        =    1.57000000000000     
+      idemix_jstar        =    10.0000000000000     
+      idemix_mu0          =    1.33333333000000     
+      idemix_n_hor_iwe_...=            5
+      idemix_surforc_file = /scratch/usr/hbkawi/IDEMIX/fourier_smooth_2005_cfsr_inert_rgrid.nc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+      idemix_botforc_file = /scratch/usr/hbkawi/IDEMIX/tidal_energy_gx1v6_20090205_rgrid.nc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+ 
+  --> read IDEMIX near inertial wave surface forcing
+  --> read IDEMIX near tidal bottom forcing
+ Arrays are set
+ FCT is initialized
+           2  tracers will be used in FESOM
+ tracer IDs are:            0           1
+ read Temperatur climatology from:phc3.0_winter.nc
+ read Salt       climatology from:phc3.0_winter.nc
+ Start: Initial conditions  for tracers
+ reading input tracer file for tracer ID=            1
+ input file: /home/hbkfheuk/hydrography/phc3.0/phc3.0_winter.nc
+ variable  : salt
+ reading input tracer file for tracer ID=            0
+ input file: /home/hbkfheuk/hydrography/phc3.0/phc3.0_winter.nc
+ variable  : temp
+ converting insitu temperature to potential...
+ DONE:  Initial conditions for tracers
+   |-> gobal max init. temp. =   30.0731735855567     
+   |-> gobal min init. temp. =  -2.05843139276997     
+   |-> gobal max init. salt. =   39.2055735828008     
+   `-> gobal min init. salt. =   5.63086681505307     
+ ____________________________________________________________
+  --> call init_thickness_ale
+ 
+ ____________________________________________________________
+  --> initialise ALE layerthicknesses, depth levels and middepth levels
+ 
+ Initial state
+ ******************************************************************************
+ vertical velocity will be split onto explicit and implicit constitutes;
+ maximum allowed CDF on explicit W is set to:    1.00000000000000     
+ ******************************************************************************
+ FESOM ocean_setup... complete
+ ****************************************************
+ forcing arrays have been set up
+      file   : namelist_bc.nml open ok
+ Start: Ocean forcing inizialization.
+ Start: Ocean forcing inizialization.
+ Surface boundary conditions parameters:
+       nm_xwind_file = /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/forcing/AOvari_FS/uas. ! name of file with X winds
+       nm_xwind_var  = uas ! name of variable in file with wind 
+       nm_ywind_file = /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/forcing/AOvari_FS/vas. ! name of file with Y winds
+       nm_ywind_var  = vas ! name of variable in file with wind 
+       nm_humi_file = /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/forcing/AOvari_FS/huss. ! name of file with humidity
+       nm_humi_var   = huss ! name of variable in file with humidity  
+       nm_qsr_file = /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/forcing/AOvari_FS/rsds. ! name of file with solar heat 
+       nm_qsr_var  = rsds ! name of variable in file with solar heat 
+       nm_qlw_file   = /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/forcing/AOvari_FS/rlds. ! name of file with Long wave 
+       nm_qlw_var    = rlds ! name of variable in file with Long wave 
+       nm_tair_file  = /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/forcing/AOvari_FS/tas. ! name of file with 2m air temperature 
+       nm_tair_var   = tas ! name of variable in file with 2m air temperature 
+       nm_prec_file  = /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/forcing/AOvari_FS/prra. ! name of file with total precipitation 
+       nm_prec_var   = prra ! name of variable in file with total precipitation  
+       nm_snow_file  = /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/forcing/AOvari_FS/prsn. ! name of file with snow precipitation 
+       nm_snow_var   = prsn !name of variable in file with air_pressure_at_sea_level 
+       nm_mslp_file  = /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/forcing/AOvari_FS/psl. !air_pressure_at_sea_level 
+       nm_mslp_var   = psl !name of variable in file with air_pressure_at_sea_level 
+ total fluxes to read:            9
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+  --> found calendar attr. in time axis: |gregorian|
+ DONE:  Ocean forcing inizialization.
+ Parts of forcing data (only constant in time fields) are read
+ Ice FCT is initialized
+ initialize the sea ice
+ Ice is initialized
+ EVP scheme option=           0
+ associating restart file /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/AOvari/fesom.1959.oce.restart.nc
+ current restart counter =            4
+      reading restart file:  /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/AOvari/fesom.1959.oce.restart.nc
+ restart from record            4  of            4
+ reading restart for ssh
+ reading restart for hbar
+ reading restart for ssh_rhs_old
+ reading restart for hnode
+ reading restart for u
+ reading restart for v
+ reading restart for urhs_AB
+ reading restart for vrhs_AB
+ reading restart for temp
+ reading restart for temp_AB
+ reading restart for salt
+ reading restart for salt_AB
+ reading restart for w
+ reading restart for w_expl
+ reading restart for w_impl
+ associating restart file /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/AOvari/fesom.1959.ice.restart.nc
+ current restart counter =            4
+      reading restart file:  /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/AOvari/fesom.1959.ice.restart.nc
+ restart from record            4  of            4
+ reading restart for area
+ reading restart for hice
+ reading restart for hsnow
+ reading restart for uice
+ reading restart for vice
+ ____________________________________________________________
+  --> restart ALE layerthicknesses, depth levels and middepth levels
+ 
+ ==========================================
+ MODEL SETUP took on mype=0 [seconds]      
+ runtime setup total         981.3193    
+  > runtime setup mesh       39.66927    
+  > runtime setup ocean      3.209906    
+  > runtime setup forcing    634.8777    
+  > runtime setup ice       4.5585632E-04
+  > runtime setup restart    303.5616    
+  > runtime setup other     2.8896332E-04
+ ============================================
+ FESOM start iteration before the barrier...
+ FESOM start iteration after the barrier...
+ 
+ [32m____________________________________________________________[0m
+ [7;32m --> FESOM STARTS TIME LOOP                                 [0m
+ Updating SSS restoring data for month            5
+ Updating monthly runoff for month            5
+      file   : namelist.io open ok
+ io_listsize will be changed from          100  to           43 !
+ adding I/O stream 2D for sst
+ adding I/O stream 2D for uice
+ adding I/O stream 2D for vice
+ adding I/O stream 2D for a_ice
+ adding I/O stream 2D for m_ice
+ adding I/O stream 2D for thdgr
+ adding I/O stream 2D for thdgrsn
+ adding I/O stream 2D for m_snow
+ adding I/O stream 2D for MLD1
+ adding I/O stream 2D for MLD2
+ adding I/O stream 2D for fh
+ adding I/O stream 2D for fw
+ adding I/O stream 2D for atmice_x
+ adding I/O stream 2D for atmice_y
+ adding I/O stream 2D for atmoce_x
+ adding I/O stream 2D for atmoce_y
+ adding I/O stream 2D for iceoce_x
+ adding I/O stream 2D for iceoce_y
+ adding I/O stream 2D for evap
+ adding I/O stream 2D for tair
+ adding I/O stream 2D for shum
+ adding I/O stream 2D for swr
+ adding I/O stream 2D for lwr
+ adding I/O stream 2D for uwind
+ adding I/O stream 2D for vwind
+ adding I/O stream 2D for tx_sur
+ adding I/O stream 2D for ty_sur
+ adding I/O stream 3D for temp
+ adding I/O stream 3D for salt
+ adding I/O stream 3D for N2
+ adding I/O stream 3D for u
+ adding I/O stream 3D for v
+ adding I/O stream 3D for w
+ adding I/O stream 2D for sss
+ adding I/O stream 2D for ssh
+ adding I/O stream 3D for pgf_x
+ adding I/O stream 3D for pgf_y
+ adding I/O stream 3D for slope_x
+ adding I/O stream 3D for slope_y
+ adding I/O stream 3D for slope_z
+ adding I/O stream 2D for alpha
+ adding I/O stream 2D for beta
+ adding I/O stream 3D for tke
+ adding I/O stream 3D for tke_Ttot
+ adding I/O stream 3D for tke_Tbpr
+ adding I/O stream 3D for tke_Tspr
+ adding I/O stream 3D for tke_Tdif
+ adding I/O stream 3D for tke_Tdis
+ adding I/O stream 3D for tke_Twin
+ adding I/O stream 3D for tke_Tbck
+ adding I/O stream 3D for tke_Lmix
+ adding I/O stream 3D for tke_Pr
+ adding I/O stream 3D for tke_Tiwf
+ adding I/O stream 3D for iwe
+ adding I/O stream 3D for iwe_Ttot
+ adding I/O stream 3D for iwe_Tdif
+ adding I/O stream 3D for iwe_Tdis
+ adding I/O stream 3D for iwe_Tsur
+ adding I/O stream 3D for iwe_Tbot
+ adding I/O stream 3D for iwe_c0
+ adding I/O stream 3D for iwe_v0
+ adding I/O stream 3D for Redi_K
+ adding I/O stream 2D for momix_length
+ adding I/O stream 2D for prec
+ adding I/O stream 2D for snow
+ adding I/O stream 2D for runoff
+ adding I/O stream 2D for cd
+ adding I/O stream 2D for ch
+ adding I/O stream 2D for ce
+ FESOM =======================================================
+ FESOM step:        2880  day:         121  year:        1959
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.371E-03
+	Ice Advect.     : 7.820E-04
+	Ice Thermodyn.  : 6.049E-04
+    _______________________________
+	Ice TOTAL       : 7.758E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=        2880
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      = -1.178289776965048E-016 -1.178289776965048E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.82140700311773        1.60909527836291     
+ 	 max(hbar), max(hbar)     =  -1.82140700311773        1.60909527836291     
+ 
+ 	 int(deta), int(dhbar)    = -4.294511685731421E-016  1.994065063334182E-019
+ 	  --> error(deta-dhbar)   = -4.296505750794756E-016
+ 	  --> error(deta-wflux)   = -4.294511685731421E-016
+ 	  --> error(dhbar-wflux)  =  1.994065063334182E-019
+ 
+ 	 -int(wflux)*dt           =  0.000000000000000E+000
+ 	 int(deta )-int(wflux)*dt = -4.294511685731421E-016
+ 	 int(dhbar)-int(wflux)*dt =  1.994065063334182E-019
+ 
+ 	___global min/max/mean  --> mstep=        2880 ____________
+ 	       eta= -1.821E+00 |  1.609E+00 | N.A.
+ 	      deta= -3.102E-03 |  3.468E-03 | N.A.
+ 	      hbar= -1.821E+00 |  1.609E+00 | N.A.
+ 	     wflux= -1.905E-05 |  1.673E-06 |  0.000E+00
+ 	     hflux= -4.306E+02 |  6.376E+03 |  0.000E+00
+ 	      temp= -1.959E+00 |  3.208E+01 |  0.000E+00
+ 	      salt=  3.815E+00 |  4.120E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.371E-17 |  4.994E-17 | N.A.
+ 	 wvel(2,:)= -5.763E-04 |  7.602E-04 | N.A.
+ 	 uvel(1,:)= -1.142E+00 |  1.466E+00 | N.A.
+ 	 uvel(2,:)= -1.073E+00 |  1.466E+00 | N.A.
+ 	 vvel(1,:)= -8.468E-01 |  1.116E+00 | N.A.
+ 	 vvel(2,:)= -8.035E-01 |  1.118E+00 | N.A.
+ 	hnode(1,:)=  9.393E+00 |  1.054E+01 | N.A.
+ 	hnode(2,:)=  9.393E+00 |  1.054E+01 | N.A.
+ 	     cfl_z=  N.A.      |  4.333E-02 | N.A.
+ 	     pgf_x=  N.A.      |  1.755E-04 | N.A.
+ 	     pgf_y=  N.A.      |  1.534E-04 | N.A.
+ 	        Av=  N.A.      |  2.447E+00 | N.A.
+ 	        Kv=  N.A.      |  2.850E+00 | N.A.
+ 	     m_ice=  N.A.      |  5.512E+00 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 6.008E-03
+     Oce. Dynamics    : 2.971E-03
+     Oce. Update Vel. : 2.050E-04
+     Oce. Fer-GM.     : 8.061E-04
+     _______________________________
+     ALE-Solve SSH    : 2.214E-03
+     ALE-Calc. hbar   : 1.769E-04
+     ALE-Update+W     : 8.080E-04
+     ALE-Solve Tracer : 1.379E-02
+     ALE-Update hnode : 9.489E-05
+     _______________________________
+     check for blowup : 6.010E-03
+     _______________________________
+     Oce. TOTAL       : 3.308E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:        5760  day:         122  year:        1959
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 7.822E-03
+	Ice Advect.     : 9.949E-04
+	Ice Thermodyn.  : 6.089E-04
+    _______________________________
+	Ice TOTAL       : 9.426E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=        5760
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      = -9.640552720623121E-017 -9.640552720623121E-017
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.81869526860758        1.59053049441665     
+ 	 max(hbar), max(hbar)     =  -1.81869526860758        1.59053049441665     
+ 
+ 	 int(deta), int(dhbar)    = -7.426225191768516E-017 -9.643429404648914E-021
+ 	  --> error(deta-dhbar)   = -7.425260848828051E-017
+ 	  --> error(deta-wflux)   = -7.426225319462232E-017
+ 	  --> error(dhbar-wflux)  = -9.644706341805250E-021
+ 
+ 	 -int(wflux)*dt           = -3.830811469007779E-023
+ 	 int(deta )-int(wflux)*dt = -7.426221360957048E-017
+ 	 int(dhbar)-int(wflux)*dt = -9.605121289958836E-021
+ 
+ 	___global min/max/mean  --> mstep=        5760 ____________
+ 	       eta= -1.819E+00 |  1.591E+00 | N.A.
+ 	      deta= -2.984E-03 |  3.560E-03 | N.A.
+ 	      hbar= -1.819E+00 |  1.591E+00 | N.A.
+ 	     wflux= -1.303E-05 |  1.839E-06 |  1.277E-24
+ 	     hflux= -4.546E+02 |  4.015E+03 |  0.000E+00
+ 	      temp= -1.970E+00 |  3.210E+01 |  0.000E+00
+ 	      salt=  3.801E+00 |  4.120E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.292E-17 |  5.481E-17 | N.A.
+ 	 wvel(2,:)= -7.349E-04 |  5.533E-04 | N.A.
+ 	 uvel(1,:)= -9.970E-01 |  1.428E+00 | N.A.
+ 	 uvel(2,:)= -1.057E+00 |  1.428E+00 | N.A.
+ 	 vvel(1,:)= -8.879E-01 |  1.099E+00 | N.A.
+ 	 vvel(2,:)= -8.868E-01 |  1.092E+00 | N.A.
+ 	hnode(1,:)=  9.394E+00 |  1.053E+01 | N.A.
+ 	hnode(2,:)=  9.394E+00 |  1.053E+01 | N.A.
+ 	     cfl_z=  N.A.      |  3.687E-02 | N.A.
+ 	     pgf_x=  N.A.      |  1.610E-04 | N.A.
+ 	     pgf_y=  N.A.      |  1.400E-04 | N.A.
+ 	        Av=  N.A.      |  1.721E+00 | N.A.
+ 	        Kv=  N.A.      |  2.864E+00 | N.A.
+ 	     m_ice=  N.A.      |  5.512E+00 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.848E-03
+     Oce. Dynamics    : 3.028E-03
+     Oce. Update Vel. : 2.239E-04
+     Oce. Fer-GM.     : 8.421E-04
+     _______________________________
+     ALE-Solve SSH    : 2.780E-03
+     ALE-Calc. hbar   : 1.550E-04
+     ALE-Update+W     : 7.911E-04
+     ALE-Solve Tracer : 1.397E-02
+     ALE-Update hnode : 8.798E-05
+     _______________________________
+     check for blowup : 6.788E-03
+     _______________________________
+     Oce. TOTAL       : 3.451E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:        8640  day:         123  year:        1959
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 1.078E-02
+	Ice Advect.     : 1.394E-03
+	Ice Thermodyn.  : 6.211E-04
+    _______________________________
+	Ice TOTAL       : 1.280E-02
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=        8640
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      = -1.178289776965048E-016 -1.178289776965048E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.77091945191522        1.59214290068533     
+ 	 max(hbar), max(hbar)     =  -1.77091945191522        1.59214290068533     
+ 
+ 	 int(deta), int(dhbar)    =  6.826869709473985E-017  9.651601802449464E-020
+ 	  --> error(deta-dhbar)   =  6.817218107671536E-017
+ 	  --> error(deta-wflux)   =  6.826869773320843E-017
+ 	  --> error(dhbar-wflux)  =  9.651665649307281E-020
+ 
+ 	 -int(wflux)*dt           =  1.915405734503889E-023
+ 	 int(deta )-int(wflux)*dt =  6.826867794068250E-017
+ 	 int(dhbar)-int(wflux)*dt =  9.649686396714961E-020
+ 
+ 	___global min/max/mean  --> mstep=        8640 ____________
+ 	       eta= -1.771E+00 |  1.592E+00 | N.A.
+ 	      deta= -2.843E-03 |  3.562E-03 | N.A.
+ 	      hbar= -1.771E+00 |  1.592E+00 | N.A.
+ 	     wflux= -1.374E-05 |  1.723E-06 | -6.385E-25
+ 	     hflux= -5.503E+02 |  4.519E+03 |  0.000E+00
+ 	      temp= -1.960E+00 |  3.214E+01 |  0.000E+00
+ 	      salt=  3.777E+00 |  4.121E+01 |  0.000E+00
+ 	 wvel(1,:)= -6.531E-17 |  5.037E-17 | N.A.
+ 	 wvel(2,:)= -8.001E-04 |  8.123E-04 | N.A.
+ 	 uvel(1,:)= -1.032E+00 |  1.417E+00 | N.A.
+ 	 uvel(2,:)= -1.086E+00 |  1.416E+00 | N.A.
+ 	 vvel(1,:)= -8.760E-01 |  1.137E+00 | N.A.
+ 	 vvel(2,:)= -8.055E-01 |  1.131E+00 | N.A.
+ 	hnode(1,:)=  9.410E+00 |  1.053E+01 | N.A.
+ 	hnode(2,:)=  9.410E+00 |  1.053E+01 | N.A.
+ 	     cfl_z=  N.A.      |  3.723E-02 | N.A.
+ 	     pgf_x=  N.A.      |  1.298E-04 | N.A.
+ 	     pgf_y=  N.A.      |  1.282E-04 | N.A.
+ 	        Av=  N.A.      |  1.817E+00 | N.A.
+ 	        Kv=  N.A.      |  2.955E+00 | N.A.
+ 	     m_ice=  N.A.      |  5.514E+00 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 6.028E-03
+     Oce. Dynamics    : 2.944E-03
+     Oce. Update Vel. : 2.251E-04
+     Oce. Fer-GM.     : 8.390E-04
+     _______________________________
+     ALE-Solve SSH    : 3.032E-03
+     ALE-Calc. hbar   : 1.550E-04
+     ALE-Update+W     : 8.180E-04
+     ALE-Solve Tracer : 1.395E-02
+     ALE-Update hnode : 8.893E-05
+     _______________________________
+     check for blowup : 6.061E-03
+     _______________________________
+     Oce. TOTAL       : 3.414E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:       11520  day:         124  year:        1959
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 8.721E-03
+	Ice Advect.     : 1.135E-03
+	Ice Thermodyn.  : 6.080E-04
+    _______________________________
+	Ice TOTAL       : 1.046E-02
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=       11520
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      = -1.178289776965048E-016 -1.178289776965048E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.78879794974719        1.61673503838644     
+ 	 max(hbar), max(hbar)     =  -1.78879794974719        1.61673503838644     
+ 
+ 	 int(deta), int(dhbar)    = -2.706385965946155E-016  3.023787186203473E-020
+ 	  --> error(deta-dhbar)   = -2.706688344664775E-016
+ 	  --> error(deta-wflux)   = -2.706385969138498E-016
+ 	  --> error(dhbar-wflux)  =  3.023755262774565E-020
+ 
+ 	 -int(wflux)*dt           = -9.577028672519446E-024
+ 	 int(deta )-int(wflux)*dt = -2.706385870175868E-016
+ 	 int(dhbar)-int(wflux)*dt =  3.024744889070725E-020
+ 
+ 	___global min/max/mean  --> mstep=       11520 ____________
+ 	       eta= -1.789E+00 |  1.617E+00 | N.A.
+ 	      deta= -2.705E-03 |  3.564E-03 | N.A.
+ 	      hbar= -1.789E+00 |  1.617E+00 | N.A.
+ 	     wflux= -3.667E-05 |  1.916E-06 |  3.192E-25
+ 	     hflux= -6.520E+02 |  1.244E+04 |  0.000E+00
+ 	      temp= -1.954E+00 |  3.211E+01 |  0.000E+00
+ 	      salt=  3.752E+00 |  4.121E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.836E-17 |  4.320E-17 | N.A.
+ 	 wvel(2,:)= -6.726E-04 |  6.057E-04 | N.A.
+ 	 uvel(1,:)= -1.042E+00 |  1.456E+00 | N.A.
+ 	 uvel(2,:)= -1.112E+00 |  1.456E+00 | N.A.
+ 	 vvel(1,:)= -8.754E-01 |  1.149E+00 | N.A.
+ 	 vvel(2,:)= -7.975E-01 |  1.120E+00 | N.A.
+ 	hnode(1,:)=  9.404E+00 |  1.054E+01 | N.A.
+ 	hnode(2,:)=  9.404E+00 |  1.054E+01 | N.A.
+ 	     cfl_z=  N.A.      |  2.653E-02 | N.A.
+ 	     pgf_x=  N.A.      |  1.390E-04 | N.A.
+ 	     pgf_y=  N.A.      |  1.304E-04 | N.A.
+ 	        Av=  N.A.      |  1.909E+00 | N.A.
+ 	        Kv=  N.A.      |  3.050E+00 | N.A.
+ 	     m_ice=  N.A.      |  5.517E+00 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 7.017E-03
+     Oce. Dynamics    : 2.564E-03
+     Oce. Update Vel. : 1.729E-04
+     Oce. Fer-GM.     : 7.999E-04
+     _______________________________
+     ALE-Solve SSH    : 3.978E-03
+     ALE-Calc. hbar   : 2.501E-04
+     ALE-Update+W     : 8.330E-04
+     ALE-Solve Tracer : 1.580E-02
+     ALE-Update hnode : 9.084E-05
+     _______________________________
+     check for blowup : 5.375E-03
+     _______________________________
+     Oce. TOTAL       : 3.688E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:       14400  day:         125  year:        1959
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.489E-03
+	Ice Advect.     : 7.858E-04
+	Ice Thermodyn.  : 6.011E-04
+    _______________________________
+	Ice TOTAL       : 7.876E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=       14400
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      = -1.606758786770520E-016 -1.606758786770520E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.82774321230439        1.61058829500667     
+ 	 max(hbar), max(hbar)     =  -1.82774321230439        1.61058829500667     
+ 
+ 	 int(deta), int(dhbar)    = -2.698967063222816E-017 -3.759302988252967E-021
+ 	  --> error(deta-dhbar)   = -2.698591132923990E-017
+ 	  --> error(deta-wflux)   = -2.698967350533676E-017
+ 	  --> error(dhbar-wflux)  = -3.762176096854722E-021
+ 
+ 	 -int(wflux)*dt           = -8.619325805267501E-023
+ 	 int(deta )-int(wflux)*dt = -2.698958443897010E-017
+ 	 int(dhbar)-int(wflux)*dt = -3.673109730200292E-021
+ 
+ 	___global min/max/mean  --> mstep=       14400 ____________
+ 	       eta= -1.828E+00 |  1.611E+00 | N.A.
+ 	      deta= -2.775E-03 |  3.358E-03 | N.A.
+ 	      hbar= -1.828E+00 |  1.611E+00 | N.A.
+ 	     wflux= -1.982E-05 |  1.833E-06 |  2.873E-24
+ 	     hflux= -7.042E+02 |  6.722E+03 |  0.000E+00
+ 	      temp= -1.953E+00 |  3.212E+01 |  0.000E+00
+ 	      salt=  3.725E+00 |  4.121E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.560E-17 |  5.134E-17 | N.A.
+ 	 wvel(2,:)= -6.388E-04 |  1.278E-03 | N.A.
+ 	 uvel(1,:)= -1.104E+00 |  1.429E+00 | N.A.
+ 	 uvel(2,:)= -1.153E+00 |  1.429E+00 | N.A.
+ 	 vvel(1,:)= -8.666E-01 |  1.132E+00 | N.A.
+ 	 vvel(2,:)= -8.134E-01 |  1.119E+00 | N.A.
+ 	hnode(1,:)=  9.391E+00 |  1.054E+01 | N.A.
+ 	hnode(2,:)=  9.391E+00 |  1.054E+01 | N.A.
+ 	     cfl_z=  N.A.      |  3.347E-02 | N.A.
+ 	     pgf_x=  N.A.      |  1.308E-04 | N.A.
+ 	     pgf_y=  N.A.      |  1.254E-04 | N.A.
+ 	        Av=  N.A.      |  1.965E+00 | N.A.
+ 	        Kv=  N.A.      |  3.108E+00 | N.A.
+ 	     m_ice=  N.A.      |  5.521E+00 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 6.164E-03
+     Oce. Dynamics    : 2.904E-03
+     Oce. Update Vel. : 1.760E-04
+     Oce. Fer-GM.     : 8.149E-04
+     _______________________________
+     ALE-Solve SSH    : 2.170E-03
+     ALE-Calc. hbar   : 1.659E-04
+     ALE-Update+W     : 7.701E-04
+     ALE-Solve Tracer : 1.388E-02
+     ALE-Update hnode : 9.108E-05
+     _______________________________
+     check for blowup : 3.951E-03
+     _______________________________
+     Oce. TOTAL       : 3.108E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:       17280  day:         126  year:        1959
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.574E-03
+	Ice Advect.     : 7.970E-04
+	Ice Thermodyn.  : 5.999E-04
+    _______________________________
+	Ice TOTAL       : 7.971E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=       17280
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      = -1.713876039221888E-016 -1.713876039221888E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.90383188623625        1.64656857005444     
+ 	 max(hbar), max(hbar)     =  -1.90383188623625        1.64656857005444     
+ 
+ 	 int(deta), int(dhbar)    = -5.265920481334668E-016  1.065680673191711E-019
+ 	  --> error(deta-dhbar)   = -5.266986162007859E-016
+ 	  --> error(deta-wflux)   = -5.265920513258097E-016
+ 	  --> error(dhbar-wflux)  =  1.065648749762802E-019
+ 
+ 	 -int(wflux)*dt           = -9.577028672519446E-023
+ 	 int(deta )-int(wflux)*dt = -5.265919523631801E-016
+ 	 int(dhbar)-int(wflux)*dt =  1.066638376058962E-019
+ 
+ 	___global min/max/mean  --> mstep=       17280 ____________
+ 	       eta= -1.904E+00 |  1.647E+00 | N.A.
+ 	      deta= -2.628E-03 |  3.325E-03 | N.A.
+ 	      hbar= -1.904E+00 |  1.647E+00 | N.A.
+ 	     wflux= -2.729E-05 |  1.858E-06 |  3.192E-24
+ 	     hflux= -3.501E+02 |  9.244E+03 |  0.000E+00
+ 	      temp= -1.951E+00 |  3.208E+01 |  0.000E+00
+ 	      salt=  3.695E+00 |  4.120E+01 |  0.000E+00
+ 	 wvel(1,:)= -4.582E-17 |  6.673E-17 | N.A.
+ 	 wvel(2,:)= -7.546E-04 |  8.016E-04 | N.A.
+ 	 uvel(1,:)= -1.321E+00 |  1.383E+00 | N.A.
+ 	 uvel(2,:)= -1.252E+00 |  1.384E+00 | N.A.
+ 	 vvel(1,:)= -8.822E-01 |  1.126E+00 | N.A.
+ 	 vvel(2,:)= -8.004E-01 |  1.122E+00 | N.A.
+ 	hnode(1,:)=  9.365E+00 |  1.055E+01 | N.A.
+ 	hnode(2,:)=  9.365E+00 |  1.055E+01 | N.A.
+ 	     cfl_z=  N.A.      |  4.283E-02 | N.A.
+ 	     pgf_x=  N.A.      |  1.738E-04 | N.A.
+ 	     pgf_y=  N.A.      |  2.021E-04 | N.A.
+ 	        Av=  N.A.      |  2.008E+00 | N.A.
+ 	        Kv=  N.A.      |  3.189E+00 | N.A.
+ 	     m_ice=  N.A.      |  5.522E+00 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.929E-03
+     Oce. Dynamics    : 3.078E-03
+     Oce. Update Vel. : 1.929E-04
+     Oce. Fer-GM.     : 8.240E-04
+     _______________________________
+     ALE-Solve SSH    : 1.970E-03
+     ALE-Calc. hbar   : 1.981E-04
+     ALE-Update+W     : 8.781E-04
+     ALE-Solve Tracer : 1.394E-02
+     ALE-Update hnode : 9.203E-05
+     _______________________________
+     check for blowup : 4.220E-03
+     _______________________________
+     Oce. TOTAL       : 3.132E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:       20160  day:         127  year:        1959
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 8.178E-03
+	Ice Advect.     : 1.115E-03
+	Ice Thermodyn.  : 6.070E-04
+    _______________________________
+	Ice TOTAL       : 9.900E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=       20160
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      = -1.392524281867784E-016 -1.392524281867784E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -2.01665495401221        1.69093001706042     
+ 	 max(hbar), max(hbar)     =  -2.01665495401221        1.69093001706042     
+ 
+ 	 int(deta), int(dhbar)    = -4.339222056858450E-016  6.586952627243242E-020
+ 	  --> error(deta-dhbar)   = -4.339880752121174E-016
+ 	  --> error(deta-wflux)   = -4.339222031319707E-016
+ 	  --> error(dhbar-wflux)  =  6.587208014674508E-020
+ 
+ 	 -int(wflux)*dt           =  7.661622938015557E-023
+ 	 int(deta )-int(wflux)*dt = -4.339222823020744E-016
+ 	 int(dhbar)-int(wflux)*dt =  6.579291004305226E-020
+ 
+ 	___global min/max/mean  --> mstep=       20160 ____________
+ 	       eta= -2.017E+00 |  1.691E+00 | N.A.
+ 	      deta= -2.778E-03 |  3.166E-03 | N.A.
+ 	      hbar= -2.017E+00 |  1.691E+00 | N.A.
+ 	     wflux= -7.590E-05 |  1.974E-06 | -2.554E-24
+ 	     hflux= -6.644E+02 |  2.593E+04 |  0.000E+00
+ 	      temp= -1.951E+00 |  3.213E+01 |  0.000E+00
+ 	      salt=  3.617E+00 |  4.119E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.180E-17 |  5.296E-17 | N.A.
+ 	 wvel(2,:)= -7.286E-04 |  9.707E-04 | N.A.
+ 	 uvel(1,:)= -1.405E+00 |  1.316E+00 | N.A.
+ 	 uvel(2,:)= -1.402E+00 |  1.316E+00 | N.A.
+ 	 vvel(1,:)= -8.450E-01 |  1.123E+00 | N.A.
+ 	 vvel(2,:)= -7.688E-01 |  1.102E+00 | N.A.
+ 	hnode(1,:)=  9.328E+00 |  1.056E+01 | N.A.
+ 	hnode(2,:)=  9.328E+00 |  1.056E+01 | N.A.
+ 	     cfl_z=  N.A.      |  2.603E-02 | N.A.
+ 	     pgf_x=  N.A.      |  1.532E-04 | N.A.
+ 	     pgf_y=  N.A.      |  1.260E-04 | N.A.
+ 	        Av=  N.A.      |  2.025E+00 | N.A.
+ 	        Kv=  N.A.      |  3.207E+00 | N.A.
+ 	     m_ice=  N.A.      |  5.522E+00 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 6.133E-03
+     Oce. Dynamics    : 2.894E-03
+     Oce. Update Vel. : 2.561E-04
+     Oce. Fer-GM.     : 8.490E-04
+     _______________________________
+     ALE-Solve SSH    : 3.036E-03
+     ALE-Calc. hbar   : 1.509E-04
+     ALE-Update+W     : 8.371E-04
+     ALE-Solve Tracer : 1.376E-02
+     ALE-Update hnode : 9.203E-05
+     _______________________________
+     check for blowup : 4.483E-03
+     _______________________________
+     Oce. TOTAL       : 3.250E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:       23040  day:         128  year:        1959
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 7.425E-03
+	Ice Advect.     : 7.401E-04
+	Ice Thermodyn.  : 5.980E-04
+    _______________________________
+	Ice TOTAL       : 8.763E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=       23040
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      = -1.285407029416416E-016 -1.285407029416416E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.94798683234086        1.68742911563964     
+ 	 max(hbar), max(hbar)     =  -1.94798683234086        1.68742911563964     
+ 
+ 	 int(deta), int(dhbar)    = -6.759267634867837E-017 -1.274894056885789E-019
+ 	  --> error(deta-dhbar)   = -6.746518694298978E-017
+ 	  --> error(deta-wflux)   = -6.759268209489557E-017
+ 	  --> error(dhbar-wflux)  = -1.274951519057824E-019
+ 
+ 	 -int(wflux)*dt           = -1.723865161053500E-022
+ 	 int(deta )-int(wflux)*dt = -6.759250396216226E-017
+ 	 int(dhbar)-int(wflux)*dt = -1.273170191724735E-019
+ 
+ 	___global min/max/mean  --> mstep=       23040 ____________
+ 	       eta= -1.948E+00 |  1.687E+00 | N.A.
+ 	      deta= -2.628E-03 |  3.347E-03 | N.A.
+ 	      hbar= -1.948E+00 |  1.687E+00 | N.A.
+ 	     wflux= -2.896E-05 |  1.936E-06 |  5.746E-24
+ 	     hflux= -4.419E+02 |  9.838E+03 |  0.000E+00
+ 	      temp= -1.952E+00 |  3.218E+01 |  0.000E+00
+ 	      salt=  3.460E+00 |  4.118E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.478E-17 |  5.569E-17 | N.A.
+ 	 wvel(2,:)= -7.642E-04 |  6.717E-04 | N.A.
+ 	 uvel(1,:)= -1.415E+00 |  1.303E+00 | N.A.
+ 	 uvel(2,:)= -1.413E+00 |  1.303E+00 | N.A.
+ 	 vvel(1,:)= -8.094E-01 |  1.166E+00 | N.A.
+ 	 vvel(2,:)= -7.491E-01 |  1.140E+00 | N.A.
+ 	hnode(1,:)=  9.351E+00 |  1.056E+01 | N.A.
+ 	hnode(2,:)=  9.351E+00 |  1.056E+01 | N.A.
+ 	     cfl_z=  N.A.      |  3.502E-02 | N.A.
+ 	     pgf_x=  N.A.      |  1.742E-04 | N.A.
+ 	     pgf_y=  N.A.      |  1.501E-04 | N.A.
+ 	        Av=  N.A.      |  2.100E+00 | N.A.
+ 	        Kv=  N.A.      |  3.318E+00 | N.A.
+ 	     m_ice=  N.A.      |  5.516E+00 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.943E-03
+     Oce. Dynamics    : 3.019E-03
+     Oce. Update Vel. : 2.239E-04
+     Oce. Fer-GM.     : 8.578E-04
+     _______________________________
+     ALE-Solve SSH    : 2.084E-03
+     ALE-Calc. hbar   : 1.552E-04
+     ALE-Update+W     : 8.140E-04
+     ALE-Solve Tracer : 1.399E-02
+     ALE-Update hnode : 8.893E-05
+     _______________________________
+     check for blowup : 4.160E-03
+     _______________________________
+     Oce. TOTAL       : 3.134E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:       25920  day:         129  year:        1959
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.603E-03
+	Ice Advect.     : 7.749E-04
+	Ice Thermodyn.  : 5.982E-04
+    _______________________________
+	Ice TOTAL       : 7.976E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=       25920
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      = -9.640552720623121E-017 -9.640552720623121E-017
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.94350474188662        1.65239462537916     
+ 	 max(hbar), max(hbar)     =  -1.94350474188662        1.65239462537916     
+ 
+ 	 int(deta), int(dhbar)    = -2.174292586509270E-016  4.911611078130506E-020
+ 	  --> error(deta-dhbar)   = -2.174783747617083E-016
+ 	  --> error(deta-wflux)   = -2.174292624817385E-016
+ 	  --> error(dhbar-wflux)  =  4.911227996983606E-020
+ 
+ 	 -int(wflux)*dt           = -1.149243440702333E-022
+ 	 int(deta )-int(wflux)*dt = -2.174291437265829E-016
+ 	 int(dhbar)-int(wflux)*dt =  4.923103512537530E-020
+ 
+ 	___global min/max/mean  --> mstep=       25920 ____________
+ 	       eta= -1.944E+00 |  1.652E+00 | N.A.
+ 	      deta= -2.634E-03 |  3.197E-03 | N.A.
+ 	      hbar= -1.944E+00 |  1.652E+00 | N.A.
+ 	     wflux= -1.907E-05 |  2.357E-06 |  3.831E-24
+ 	     hflux= -6.005E+02 |  6.537E+03 |  0.000E+00
+ 	      temp= -1.950E+00 |  3.223E+01 |  0.000E+00
+ 	      salt=  3.404E+00 |  4.118E+01 |  0.000E+00
+ 	 wvel(1,:)= -6.729E-17 |  5.058E-17 | N.A.
+ 	 wvel(2,:)= -7.873E-04 |  9.270E-04 | N.A.
+ 	 uvel(1,:)= -1.361E+00 |  1.315E+00 | N.A.
+ 	 uvel(2,:)= -1.361E+00 |  1.314E+00 | N.A.
+ 	 vvel(1,:)= -8.045E-01 |  1.178E+00 | N.A.
+ 	 vvel(2,:)= -7.092E-01 |  1.139E+00 | N.A.
+ 	hnode(1,:)=  9.352E+00 |  1.055E+01 | N.A.
+ 	hnode(2,:)=  9.352E+00 |  1.055E+01 | N.A.
+ 	     cfl_z=  N.A.      |  2.874E-02 | N.A.
+ 	     pgf_x=  N.A.      |  1.577E-04 | N.A.
+ 	     pgf_y=  N.A.      |  1.605E-04 | N.A.
+ 	        Av=  N.A.      |  2.034E+00 | N.A.
+ 	        Kv=  N.A.      |  3.211E+00 | N.A.
+ 	     m_ice=  N.A.      |  5.510E+00 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.863E-03
+     Oce. Dynamics    : 2.945E-03
+     Oce. Update Vel. : 2.580E-04
+     Oce. Fer-GM.     : 8.130E-04
+     _______________________________
+     ALE-Solve SSH    : 2.259E-03
+     ALE-Calc. hbar   : 1.478E-04
+     ALE-Update+W     : 7.882E-04
+     ALE-Solve Tracer : 1.388E-02
+     ALE-Update hnode : 9.203E-05
+     _______________________________
+     check for blowup : 4.154E-03
+     _______________________________
+     Oce. TOTAL       : 3.120E-02
+ 
+ 
+ FESOM =======================================================
+ FESOM step:       28800  day:         130  year:        1959
+ 
+ ___ICE STEP EXECUTION TIMES____________________________
+	Ice Dyn.        : 6.424E-03
+	Ice Advect.     : 7.670E-04
+	Ice Thermodyn.  : 5.920E-04
+    _______________________________
+	Ice TOTAL       : 7.783E-03
+ 
+ ___CHECK GLOBAL OCEAN VARIABLES --> mstep=       28800
+ 	___global estimat of eta & hbar____________________
+ 	 int(eta), int(hbar)      = -1.285407029416416E-016 -1.285407029416416E-016
+ 	  --> error(eta-hbar)     =  0.000000000000000E+000
+ 	 min(eta) , max(eta)      =  -1.89313982028819        1.60578417677461     
+ 	 max(hbar), max(hbar)     =  -1.89313982028819        1.60578417677461     
+ 
+ 	 int(deta), int(dhbar)    = -2.315454413718169E-016  1.699858742514385E-020
+ 	  --> error(deta-dhbar)   = -2.315624399592420E-016
+ 	  --> error(deta-wflux)   = -2.315454452026283E-016
+ 	  --> error(dhbar-wflux)  =  1.699475661367484E-020
+ 
+ 	 -int(wflux)*dt           = -1.149243440702333E-022
+ 	 int(deta )-int(wflux)*dt = -2.315453264474728E-016
+ 	 int(dhbar)-int(wflux)*dt =  1.711351176921408E-020
+ 
+ 	___global min/max/mean  --> mstep=       28800 ____________
+ 	       eta= -1.893E+00 |  1.606E+00 | N.A.
+ 	      deta= -2.781E-03 |  3.253E-03 | N.A.
+ 	      hbar= -1.893E+00 |  1.606E+00 | N.A.
+ 	     wflux= -1.340E-05 |  2.032E-06 |  3.831E-24
+ 	     hflux= -5.551E+02 |  4.418E+03 |  0.000E+00
+ 	      temp= -1.953E+00 |  3.222E+01 |  0.000E+00
+ 	      salt=  3.589E+00 |  4.118E+01 |  0.000E+00
+ 	 wvel(1,:)= -5.023E-17 |  5.217E-17 | N.A.
+ 	 wvel(2,:)= -7.731E-04 |  7.748E-04 | N.A.
+ 	 uvel(1,:)= -1.274E+00 |  1.269E+00 | N.A.
+ 	 uvel(2,:)= -1.273E+00 |  1.269E+00 | N.A.
+ 	 vvel(1,:)= -8.336E-01 |  1.215E+00 | N.A.
+ 	 vvel(2,:)= -6.895E-01 |  1.171E+00 | N.A.
+ 	hnode(1,:)=  9.369E+00 |  1.054E+01 | N.A.
+ 	hnode(2,:)=  9.369E+00 |  1.054E+01 | N.A.
+ 	     cfl_z=  N.A.      |  2.918E-02 | N.A.
+ 	     pgf_x=  N.A.      |  1.536E-04 | N.A.
+ 	     pgf_y=  N.A.      |  1.187E-04 | N.A.
+ 	        Av=  N.A.      |  1.983E+00 | N.A.
+ 	        Kv=  N.A.      |  3.154E+00 | N.A.
+ 	     m_ice=  N.A.      |  5.506E+00 | N.A.
+ 
+ ___ALE OCEAN STEP EXECUTION TIMES______________________
+     Oce. Mix,Press.. : 5.947E-03
+     Oce. Dynamics    : 2.966E-03
+     Oce. Update Vel. : 2.339E-04
+     Oce. Fer-GM.     : 8.080E-04
+     _______________________________
+     ALE-Solve SSH    : 2.063E-03
+     ALE-Calc. hbar   : 1.731E-04
+     ALE-Update+W     : 7.758E-04
+     ALE-Solve Tracer : 1.386E-02
+     ALE-Update hnode : 8.798E-05
+     _______________________________
+     check for blowup : 4.027E-03
+     _______________________________
+     Oce. TOTAL       : 3.094E-02
+ 
+ 
