@@ -8,9 +8,9 @@ Module for nco 4.9.1 loaded.
 Module for Intel Parallel Studio XE Composer Edition (version 2018 Update 5) loaded.
 Module for Intel-MPI (version 2018.5) loaded.
 + ulimit -s unlimited
-++ echo 6405811
+++ echo 6413207
 ++ cut -d. -f1
-+ JOBID=6405811
++ JOBID=6413207
 + ln -s ../../bin/fesom.x .
 ln: failed to create symbolic link ‘./fesom.x’: File exists
 + cp -n ../config/namelist.config .
@@ -22,42 +22,7 @@ ln: failed to create symbolic link ‘./fesom.x’: File exists
 + cp -n ../config/namelist.icepack .
 + date
 + srun --mpi=pmi2 ./fesom.x
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** STEP 6405811.0 ON bcn1721 CANCELLED AT 2022-02-16T09:48:40 ***
-slurmstepd: error: *** JOB 6405811 ON bcn1721 CANCELLED AT 2022-02-16T09:48:40 ***
-
-fesom.x:4994 terminated with signal 11 at PC=2aab1105e11d SP=2aab15bdc858.  Backtrace:
-
-fesom.x:460900 terminated with signal 11 at PC=2aab1105deec SP=2aab15bdc858.  Backtrace:
-
-fesom.x:199771 terminated with signal 11 at PC=2aab1105ed68 SP=2aab15bdc858.  Backtrace:
-/lib64/libpsm2.so.2(+0x58d68)[0x2aab1105ed68]
-/lib64/libpsm2.so.2(+0x49098)[0x2aab1104f098]
-/lib64/libpsm2.so.2(+0x223fe)[0x2aab110283fe]
-/lib64/libpsm2.so.2(+0x4268d)[0x2aab1104868d]
-/lib64/libpsm2.so.2(+0x2b25e)[0x2aab1103125e]
-/lib64/libpsm2.so.2(+0x28084)[0x2aab1102e084]
-/lib64/libpsm2.so.2(+0x25f3f)[0x2aab1102bf3f]
-/lib64/libpsm2.so.2(+0x298a0)[0x2aab1102f8a0]
-/lib64/libpthread.so.0(+0x7ea5)[0x2aaab4a41ea5]
-/lib64/libc.so.6(clone+0x6d)[0x2aaab4d54b0d]
-/lib64/libpsm2.so.2(+0x5811d)[0x2aab1105e11d]
-/lib64/libpsm2.so.2(+0x49098)[0x2aab1104f098]
-/lib64/libpsm2.so.2(+0x223fe)[0x2aab110283fe]
-/lib64/libpsm2.so.2(+0x4268d)[0x2aab1104868d]
-/lib64/libpsm2.so.2(+0x2b25e)[0x2aab1103125e]
-/lib64/libpsm2.so.2(+0x28084)[0x2aab1102e084]
-/lib64/libpsm2.so.2(+0x25f3f)[0x2aab1102bf3f]
-/lib64/libpsm2.so.2(+0x298a0)[0x2aab1102f8a0]
-/lib64/libpthread.so.0(+0x7ea5)[0x2aaab4a41ea5]
-/lib64/libc.so.6(clone+0x6d)[0x2aaab4d54b0d]
-/lib64/libpsm2.so.2(+0x57eec)[0x2aab1105deec]
-/lib64/libpsm2.so.2(+0x49098)[0x2aab1104f098]
-/lib64/libpsm2.so.2(+0x223fe)[0x2aab110283fe]
-/lib64/libpsm2.so.2(+0x4268d)[0x2aab1104868d]
-/lib64/libpsm2.so.2(+0x2b25e)[0x2aab1103125e]
-/lib64/libpsm2.so.2(+0x28084)[0x2aab1102e084]
-/lib64/libpsm2.so.2(+0x25f3f)[0x2aab1102bf3f]
-/lib64/libpsm2.so.2(+0x298a0)[0x2aab1102f8a0]
-/lib64/libpthread.so.0(+0x7ea5)[0x2aaab4a41ea5]
-/lib64/libc.so.6(clone+0x6d)[0x2aaab4d54b0d]
++ date
++ Resultpath=/scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/nonAOvari
++ test -e /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/nonAOvari/fesom.2019.oce.restart.nc
++ exit

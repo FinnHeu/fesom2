@@ -8,9 +8,9 @@ Module for nco 4.9.1 loaded.
 Module for Intel Parallel Studio XE Composer Edition (version 2018 Update 5) loaded.
 Module for Intel-MPI (version 2018.5) loaded.
 + ulimit -s unlimited
-++ echo 6405810
+++ echo 6413178
 ++ cut -d. -f1
-+ JOBID=6405810
++ JOBID=6413178
 + ln -s ../../bin/fesom.x .
 ln: failed to create symbolic link ‘./fesom.x’: File exists
 + cp -n ../config/namelist.config .
@@ -22,6 +22,7 @@ ln: failed to create symbolic link ‘./fesom.x’: File exists
 + cp -n ../config/namelist.icepack .
 + date
 + srun --mpi=pmi2 ./fesom.x
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** STEP 6405810.0 ON bcn1381 CANCELLED AT 2022-02-16T09:48:51 ***
-slurmstepd: error: *** JOB 6405810 ON bcn1381 CANCELLED AT 2022-02-16T09:48:51 ***
++ date
++ Resultpath=/scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/AOvari
++ test -e /scratch/projects/hbk00087/hbkfheuk/projects/JRA55_CORE1/results5/AOvari/fesom.2019.oce.restart.nc
++ exit

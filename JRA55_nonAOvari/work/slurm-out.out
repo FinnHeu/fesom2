@@ -1,9 +1,10 @@
-Wed Feb 16 09:13:27 CET 2022
+Sun Feb 20 06:05:46 CET 2022
+Sun Feb 20 07:39:50 CET 2022
 ============ Job Information ===================================================
-Submitted: 2022-02-16T09:13:23
-Started: 2022-02-16T09:13:23
-Ended: 2022-02-16T09:48:40
-Elapsed: 36 min, Limit: 720 min, Difference: 684 min
+Submitted: 2022-02-20T06:05:43
+Started: 2022-02-20T06:05:43
+Ended: 2022-02-20T07:39:51
+Elapsed: 95 min, Limit: 720 min, Difference: 625 min
 CPUs: 4608, Nodes: 24
-Estimated NPL: 197.5228
+Estimated NPL: 526.9963
 ================================================================================
