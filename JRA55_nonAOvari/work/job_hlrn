@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=CTRL
+#SBATCH --job-name=nonAOvari
 #SBATCH --partition=standard96
 #SBATCH --ntasks=2304      ######2304
 #SBATCH --ntasks-per-node=96
