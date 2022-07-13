@@ -51,20 +51,20 @@ date
 
 ### exit after 2020
 
-#Resultpath='/scratch/projects/hbk00087/hbkfheuk/projects/JRA_CORE/results/AOvari/'
-#test -e $Resultpath/fesom.2019.oce.restart.nc && exit
+Resultpath='/scratch/projects/hbk00087/hbkfheuk/projects/JRA_CORE/results/AOvari/'
+test -e $Resultpath/fesom.2019.oce.restart.nc && exit
 
-#IsInFile=$( tail -1 fesom2.0.out | grep -c should)
-#if (( IsInFile > 0 )); then
+IsInFile=$( tail -1 fesom2.0.out | grep -c should)
+if (( IsInFile > 0 )); then
  ### submit next #job
-# echo "submitting next job"
-# cp fesom2.0.out fesom.out.done
-# sbatch job_hlrn
-#else
+ echo "submitting next job"
+ cp fesom2.0.out fesom.out.done
+ sbatch job_hlrn
+else
  ### copy	work and src to	resultpath
 # cp -r ../work/	$Resultpath
 # cp -r ../../src/ $Resultpath
-# echo "something is wrong, last line of fesom.out reads"
-# echo $( tail -1 fesom2.0.out)
-# echo "abnormal termination of job script"
-#fi
+ echo "something is wrong, last line of fesom.out reads"
+ echo $( tail -1 fesom2.0.out)
+ echo "abnormal termination of job script"
+fi
