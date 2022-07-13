@@ -1,0 +1,24 @@
+
+Loading HLRNenv
+  Loading requirement: sw.skl
+Module for CMake 3.16.2 loaded.
+Module for cdo version 1.9.8 loaded
+Contains: cdo suitable for threadsafe (omp) applications.
+Module for nco 4.9.1 loaded.
+Module for Intel Parallel Studio XE Composer Edition (version 2018 Update 5) loaded.
+Module for Intel-MPI (version 2018.5) loaded.
++ ulimit -s unlimited
+++ echo 6638799
+++ cut -d. -f1
++ JOBID=6638799
++ ln -s ../../bin/fesom.x .
++ cp -n ../config/namelist.config .
++ cp -n ../config/namelist.forcing .
++ cp -n ../config/namelist.oce .
++ cp -n ../config/namelist.ice .
++ cp -n ../config/namelist.io .
++ cp -n ../config/namelist.cvmix .
++ cp -n ../config/namelist.icepack .
++ date
++ srun --mpi=pmi2 ./fesom.x
++ date
