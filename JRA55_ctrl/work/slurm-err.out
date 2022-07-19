@@ -1,0 +1,125 @@
+
+Loading HLRNenv
+  Loading requirement: sw.skl
+Module for CMake 3.16.2 loaded.
+Module for cdo version 1.9.8 loaded
+Contains: cdo suitable for threadsafe (omp) applications.
+Module for nco 4.9.1 loaded.
+Module for Intel Parallel Studio XE Composer Edition (version 2018 Update 5) loaded.
+Module for Intel-MPI (version 2018.5) loaded.
++ ulimit -s unlimited
+++ echo 6645899
+++ cut -d. -f1
++ JOBID=6645899
++ ln -s ../../bin/fesom.x .
+ln: failed to create symbolic link ‘./fesom.x’: File exists
++ cp -n ../config/namelist.config .
++ cp -n ../config/namelist.forcing .
++ cp -n ../config/namelist.oce .
++ cp -n ../config/namelist.ice .
++ cp -n ../config/namelist.io .
++ cp -n ../config/namelist.cvmix .
++ cp -n ../config/namelist.icepack .
++ date
++ srun --mpi=pmi2 ./fesom.x
+
+fesom.x:358774 terminated with signal 11 at PC=507387 SP=7fffffff3080.  Backtrace:
+
+fesom.x:358792 terminated with signal 11 at PC=507387 SP=7fffffff3080.  Backtrace:
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x507387]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x46c0e5]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x460fe3]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d75e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d669]
+
+fesom.x:535374 terminated with signal 11 at PC=507387 SP=7fffffff3080.  Backtrace:
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x507387]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x46c0e5]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x460fe3]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d75e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d669]
+
+fesom.x:520478 terminated with signal 11 at PC=507387 SP=7fffffff3080.  Backtrace:
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x507387]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x46c0e5]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x460fe3]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d75e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d669]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x507387]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x46c0e5]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x460fe3]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d75e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d669]
+
+fesom.x:479870 terminated with signal 11 at PC=507387 SP=7fffffff3000.  Backtrace:
+
+fesom.x:375828 terminated with signal 11 at PC=507387 SP=7fffffff3000.  Backtrace:
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x507387]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x46c0e5]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x460fe3]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d75e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d669]
+
+fesom.x:383354 terminated with signal 11 at PC=507387 SP=7fffffff3000.  Backtrace:
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x507387]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x46c0e5]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x460fe3]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d75e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d669]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x507387]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x46c0e5]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x460fe3]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d75e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d669]
+
+fesom.x:43578 terminated with signal 11 at PC=507387 SP=7fffffff3000.  Backtrace:
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x507387]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x46c0e5]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x460fe3]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d75e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d669]
+srun: error: bcn1592: task 700: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=6645899.0
+srun: error: bcn1594: task 796: Exited with exit code 1
+srun: error: bcn1616: task 1836: Exited with exit code 1
+srun: error: bcn1586: task 402: Exited with exit code 1
+srun: error: bcn1600: task 1086: Exited with exit code 1
+srun: error: bcn1602: task 1206: Exited with exit code 1
+srun: error: bcn1598: task 1018: Exited with exit code 1
+slurmstepd: error: *** STEP 6645899.0 ON bcn1578 CANCELLED AT 2022-07-17T15:28:08 ***
+srun: error: bcn1600: tasks 1056-1085,1087-1151: Exited with exit code 1
+srun: error: bcn1616: tasks 1824-1835,1837-1919: Exited with exit code 1
+srun: error: bcn1592: tasks 672-699,701-767: Exited with exit code 1
+srun: error: bcn1602: tasks 1152-1205,1207-1247: Exited with exit code 1
+srun: error: bcn1594: tasks 768-795,797-863: Exited with exit code 1
+srun: error: bcn1586: tasks 384-401,403-479: Exited with exit code 1
+srun: error: bcn1598: tasks 960-1017,1019-1055: Exited with exit code 1
+srun: error: bcn1588: tasks 480-575: Exited with exit code 1
+srun: error: bcn1618: tasks 1920-2015: Exited with exit code 1
+srun: error: bcn1614: tasks 1728-1823: Exited with exit code 1
+srun: error: bcn1582: tasks 192-287: Exited with exit code 1
+srun: error: bcn1590: tasks 576-671: Exited with exit code 1
+srun: error: bcn1584: tasks 288-383: Exited with exit code 1
+srun: error: bcn1596: tasks 864-959: Exited with exit code 1
+srun: error: bcn1606: tasks 1344-1439: Exited with exit code 1
+srun: error: bcn1580: tasks 96-191: Exited with exit code 1
+srun: error: bcn1624: tasks 2208-2303: Exited with exit code 1
+srun: error: bcn1604: tasks 1248-1343: Exited with exit code 1
+srun: error: bcn1612: tasks 1632-1727: Exited with exit code 1
+srun: error: bcn1620: tasks 2016-2111: Exited with exit code 1
+srun: error: bcn1622: tasks 2112-2207: Exited with exit code 1
+srun: error: bcn1610: tasks 1536-1631: Exited with exit code 1
+srun: error: bcn1578: tasks 0-95: Exited with exit code 1
+srun: error: bcn1608: tasks 1440-1535: Exited with exit code 1
++ date
++ Resultpath=/scratch/projects/hbk00087/hbkfheuk/projects/JRA_CORE/results/ctrl/
++ test -e /scratch/projects/hbk00087/hbkfheuk/projects/JRA_CORE/results/ctrl//fesom.2019.oce.restart.nc
++ exit

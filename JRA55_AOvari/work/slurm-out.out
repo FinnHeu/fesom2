@@ -1,0 +1,13 @@
+Wed Jul 13 14:49:48 CEST 2022
+Wed Jul 13 16:26:53 CEST 2022
+something is wrong, last line of fesom.out reads
+Run finished unexpectedly!
+abnormal termination of job script
+============ Job Information ===================================================
+Submitted: 2022-07-13T14:49:39
+Started: 2022-07-13T14:49:44
+Ended: 2022-07-13T16:26:53
+Elapsed: 98 min, Limit: 720 min, Difference: 622 min
+CPUs: 4608, Nodes: 24
+Estimated NPL: 543.8932
+================================================================================

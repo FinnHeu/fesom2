@@ -8,10 +8,11 @@ Module for nco 4.9.1 loaded.
 Module for Intel Parallel Studio XE Composer Edition (version 2018 Update 5) loaded.
 Module for Intel-MPI (version 2018.5) loaded.
 + ulimit -s unlimited
-++ echo 6638802
+++ echo 6640672
 ++ cut -d. -f1
-+ JOBID=6638802
++ JOBID=6640672
 + ln -s ../../bin/fesom.x .
+ln: failed to create symbolic link ‘./fesom.x’: File exists
 + cp -n ../config/namelist.config .
 + cp -n ../config/namelist.forcing .
 + cp -n ../config/namelist.oce .
@@ -21,4 +22,42 @@ Module for Intel-MPI (version 2018.5) loaded.
 + cp -n ../config/namelist.icepack .
 + date
 + srun --mpi=pmi2 ./fesom.x
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+slurmstepd: error: *** STEP 6640672.0 ON bcn1387 CANCELLED AT 2022-07-13T16:24:16 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: bcn1710: tasks 1824-1919: Killed
+srun: launch/slurm: _step_signal: Terminating StepId=6640672.0
+srun: error: bcn1550: tasks 1440-1535: Killed
+srun: error: bcn1542: tasks 1056-1151: Killed
+srun: error: bcn1708: tasks 1728-1823: Killed
+srun: error: bcn1544: tasks 1152-1247: Killed
+srun: error: bcn1712: tasks 1920-2015: Killed
+srun: error: bcn1868: tasks 2112-2207: Killed
+srun: error: bcn1866: tasks 2016-2111: Killed
+srun: error: bcn1546: tasks 1248-1343: Killed
+srun: error: bcn1552: tasks 1536-1631: Killed
+srun: error: bcn1540: tasks 960-1055: Killed
+srun: error: bcn1548: tasks 1344-1439: Killed
+srun: error: bcn1706: tasks 1632-1727: Killed
+srun: error: bcn1870: tasks 2208-2303: Killed
+srun: error: bcn1387: tasks 0-95: Killed
+srun: error: bcn1391: tasks 192-287: Killed
+srun: error: bcn1538: tasks 864-959: Killed
+srun: error: bcn1530: tasks 480-575: Killed
+srun: error: bcn1536: tasks 768-863: Killed
+srun: error: bcn1534: tasks 672-767: Killed
+srun: error: bcn1490: tasks 384-479: Killed
+srun: error: bcn1532: tasks 576-671: Killed
+srun: error: bcn1393: tasks 288-383: Killed
+srun: error: bcn1389: tasks 96-191: Killed
 + date
++ Resultpath=/scratch/projects/hbk00087/hbkfheuk/projects/JRA_CORE/results/nonAOvari/
++ test -e /scratch/projects/hbk00087/hbkfheuk/projects/JRA_CORE/results/nonAOvari//fesom.2019.oce.restart.nc
+++ tail -1 fesom2.0.out
+++ grep -c should
++ IsInFile=0
++ ((  IsInFile > 0  ))
++ echo 'something is wrong, last line of fesom.out reads'
+++ tail -1 fesom2.0.out
++ echo Run finished 'unexpectedly!'
++ echo 'abnormal termination of job script'

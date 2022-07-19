@@ -1,0 +1,8 @@
+
+fesom.x:358774 terminated with signal 11 at PC=507387 SP=7fffffff3080.  Backtrace:
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x507387]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x46c0e5]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x460fe3]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d75e]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aaab4c78555]
+/home/hbkfheuk/fesom2_fork/fesom2/JRA55_ctrl/work/./fesom.x[0x40d669]
