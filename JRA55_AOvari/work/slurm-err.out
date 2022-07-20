@@ -1,0 +1,63 @@
+
+Loading HLRNenv
+  Loading requirement: sw.skl
+Module for CMake 3.16.2 loaded.
+Module for cdo version 1.9.8 loaded
+Contains: cdo suitable for threadsafe (omp) applications.
+Module for nco 4.9.1 loaded.
+Module for Intel Parallel Studio XE Composer Edition (version 2018 Update 5) loaded.
+Module for Intel-MPI (version 2018.5) loaded.
++ ulimit -s unlimited
+++ echo 6649555
+++ cut -d. -f1
++ JOBID=6649555
++ ln -s ../../bin/fesom.x .
+ln: failed to create symbolic link ‘./fesom.x’: File exists
++ cp -n ../config/namelist.config .
++ cp -n ../config/namelist.forcing .
++ cp -n ../config/namelist.oce .
++ cp -n ../config/namelist.ice .
++ cp -n ../config/namelist.io .
++ cp -n ../config/namelist.cvmix .
++ cp -n ../config/namelist.icepack .
++ date
++ srun --mpi=pmi2 ./fesom.x
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+slurmstepd: error: *** STEP 6649555.0 ON bcn2009 CANCELLED AT 2022-07-19T17:10:02 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: bcn2029: tasks 960-1055: Killed
+srun: launch/slurm: _step_signal: Terminating StepId=6649555.0
+srun: error: bcn2047: tasks 1824-1919: Killed
+srun: error: bcn2031: tasks 1056-1151: Killed
+srun: error: bcn2049: tasks 1920-2015: Killed
+srun: error: bcn2033: tasks 1152-1247: Killed
+srun: error: bcn2045: tasks 1728-1823: Killed
+srun: error: bcn2051: tasks 2016-2111: Killed
+srun: error: bcn2039: tasks 1440-1535: Killed
+srun: error: bcn2043: tasks 1632-1727: Killed
+srun: error: bcn2037: tasks 1344-1439: Killed
+srun: error: bcn2041: tasks 1536-1631: Killed
+srun: error: bcn2035: tasks 1248-1343: Killed
+srun: error: bcn2053: tasks 2112-2207: Killed
+srun: error: bcn2055: tasks 2208-2303: Killed
+srun: error: bcn2019: tasks 480-575: Killed
+srun: error: bcn2015: tasks 288-383: Killed
+srun: error: bcn2017: tasks 384-479: Killed
+srun: error: bcn2023: tasks 672-767: Killed
+srun: error: bcn2027: tasks 864-959: Killed
+srun: error: bcn2013: tasks 192-287: Killed
+srun: error: bcn2021: tasks 576-671: Killed
+srun: error: bcn2025: tasks 768-863: Killed
+srun: error: bcn2011: tasks 96-191: Killed
+srun: error: bcn2009: tasks 0-95: Killed
++ date
++ Resultpath=/scratch/projects/hbk00087/hbkfheuk/projects/JRA_CORE/results/AOvari/
++ test -e /scratch/projects/hbk00087/hbkfheuk/projects/JRA_CORE/results/AOvari//fesom.2019.oce.restart.nc
+++ tail -1 fesom2.0.out
+++ grep -c should
++ IsInFile=0
++ ((  IsInFile > 0  ))
++ echo 'something is wrong, last line of fesom.out reads'
+++ tail -1 fesom2.0.out
++ echo Run finished 'unexpectedly!'
++ echo 'abnormal termination of job script'
