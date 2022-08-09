@@ -1,13 +1,10 @@
-Thu Jul 28 14:14:54 CEST 2022
-Thu Jul 28 14:26:56 CEST 2022
-something is wrong, last line of fesom.out reads
---> finished writing blow up file
-abnormal termination of job script
+Mon Aug  8 15:16:05 CEST 2022
+Mon Aug  8 16:19:46 CEST 2022
 ============ Job Information ===================================================
-Submitted: 2022-07-28T14:14:46
-Started: 2022-07-28T14:14:51
-Ended: 2022-07-28T14:26:56
-Elapsed: 13 min, Limit: 720 min, Difference: 707 min
+Submitted: 2022-08-08T15:16:01
+Started: 2022-08-08T15:16:01
+Ended: 2022-08-08T16:19:46
+Elapsed: 64 min, Limit: 720 min, Difference: 656 min
 CPUs: 4608, Nodes: 24
-Estimated NPL: 67.6213
+Estimated NPL: 356.9184
 ================================================================================

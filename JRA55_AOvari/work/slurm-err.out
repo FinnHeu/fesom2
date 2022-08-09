@@ -8,11 +8,10 @@ Module for nco 4.9.1 loaded.
 Module for Intel Parallel Studio XE Composer Edition (version 2018 Update 5) loaded.
 Module for Intel-MPI (version 2018.5) loaded.
 + ulimit -s unlimited
-++ echo 6684186
+++ echo 6684198
 ++ cut -d. -f1
-+ JOBID=6684186
++ JOBID=6684198
 + ln -s ../../bin/fesom.x .
-ln: failed to create symbolic link ‘./fesom.x’: File exists
 + cp -n ../config/namelist.config .
 + cp -n ../config/namelist.forcing .
 + cp -n ../config/namelist.oce .
@@ -23,13 +22,3 @@ ln: failed to create symbolic link ‘./fesom.x’: File exists
 + date
 + srun --mpi=pmi2 ./fesom.x
 + date
-+ Resultpath=/scratch/projects/hbk00087/hbkfheuk/projects/JRA_CORE/results/AOvari/
-+ test -e /scratch/projects/hbk00087/hbkfheuk/projects/JRA_CORE/results/AOvari//fesom.2019.oce.restart.nc
-++ tail -1 fesom2.0.out
-++ grep -c should
-+ IsInFile=0
-+ ((  IsInFile > 0  ))
-+ echo 'something is wrong, last line of fesom.out reads'
-++ tail -1 fesom2.0.out
-+ echo
-+ echo 'abnormal termination of job script'
