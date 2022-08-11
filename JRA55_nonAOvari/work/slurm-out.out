@@ -1,10 +1,13 @@
-Mon Aug  8 15:16:05 CEST 2022
-Mon Aug  8 16:19:46 CEST 2022
+Wed Aug 10 20:29:24 CEST 2022
+Wed Aug 10 20:29:41 CEST 2022
+something is wrong, last line of fesom.out reads
+
+abnormal termination of job script
 ============ Job Information ===================================================
-Submitted: 2022-08-08T15:16:01
-Started: 2022-08-08T15:16:01
-Ended: 2022-08-08T16:19:46
-Elapsed: 64 min, Limit: 720 min, Difference: 656 min
+Submitted: 2022-08-10T20:29:14
+Started: 2022-08-10T20:29:20
+Ended: 2022-08-10T20:29:42
+Elapsed: 1 min, Limit: 720 min, Difference: 719 min
 CPUs: 4608, Nodes: 24
-Estimated NPL: 356.9184
+Estimated NPL: 2.0491
 ================================================================================
