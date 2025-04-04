@@ -1,15 +1,19 @@
 # make the contents as shell agnostic as possible so we can include them with bash, zsh and others
 
-module load gcc/4.9.3
-module load intel/17.0.4.196
+set -e
+module purge
+module load NHRZIBenv
+module load slurm
+module load sw.clx.el9
+module load intel/2024.2
+module load impi/2021.13
+module load hdf5-parallel/impi/intel/1.14.4
+module load netcdf-parallel/impi/intel/4.9.2
+module load cdo nco
 
-module swap PrgEnv-cray PrgEnv-intel
-module swap cray-mpich cray-mpich
-module unload cray-hdf5
-module load cray-netcdf
-module load cray-hdf5
+export NETCDF_C_PATH=/sw/dataformats/netcdf/4.9.2/clx.el9/impi/intel
+export NETCDF_FORTRAN_PATH=/sw/dataformats/netcdf/4.9.2/clx.el9/impi/intel
 
-export CRAYPE_LINK_TYPE=dynamic
-export PATH=/gfs1/work/hbxeeeee/sw/cmake/bin:$PATH
-
-export FC=ftn CC=cc CXX=g++
+export CMAKE_PREFIX_PATH=$NETCDF_C_PATH:$NETCDF_FORTRAN_PATH:$CMAKE_PREFIX_PATH
+export PATH=$NETCDF_C_PATH/bin:$PATH
+export LD_LIBRARY_PATH=$NETCDF_C_PATH/lib:$LD_LIBRARY_PATH
