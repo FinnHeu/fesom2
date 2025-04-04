@@ -1,0 +1,53 @@
+#!/bin/bash	
+#SBATCH --job-name=fesom2.6
+#SBATCH --partition=cpu-clx:test
+#SBATCH --ntasks=96
+#SBATCH --ntasks-per-node=96
+#SBATCH --time=01:00:00
+#SBATCH -o slurm-out.out
+#SBATCH -e slurm-err.out
+#SBATCH --account=hbk00099 
+
+## modules HLRN/NHRZIB
+module purge
+module load slurm
+module load NHRZIBenv
+module load sw.clx.el9
+module load intel/2024.2
+module load impi/2021.13
+module load cdo 
+module load nco 
+module load hdf5-parallel/impi/intel/1.14.4
+module load netcdf-parallel/impi/intel/4.9.2
+
+export PSM2_MULTI_EP=0
+
+export NETCDF_C_PATH=/sw/dataformats/netcdf/4.9.2/clx.el9/impi/intel
+export NETCDF_FORTRAN_PATH=/sw/dataformats/netcdf/4.9.2/clx.el9/impi/intel
+
+export CMAKE_PREFIX_PATH=$NETCDF_C_PATH:$NETCDF_FORTRAN_PATH:$CMAKE_PREFIX_PATH
+export PATH=$NETCDF_C_PATH/bin:$PATH
+export LD_LIBRARY_PATH=$NETCDF_C_PATH/lib:$LD_LIBRARY_PATH
+
+set -x
+
+ulimit -s unlimited
+
+# determine JOBID
+JOBID=`echo $SLURM_JOB_ID |cut -d"." -f1`
+
+rm *.out 
+
+ln -s ../bin/fesom.x .           # cp -n ../bin/fesom.x
+cp -n ../config/namelist.config  .
+cp -n ../config/namelist.forcing .
+cp -n ../config/namelist.oce     .
+cp -n ../config/namelist.dyn     .
+cp -n ../config/namelist.tra     .
+cp -n ../config/namelist.ice     .
+cp -n ../config/namelist.io      .
+cp -n ../config/namelist.icepack .
+
+date
+srun ./fesom.x > "fesom2.6.out"
+date

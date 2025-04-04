@@ -1,0 +1,38 @@
+#!/bin/bash
+#SBATCH --job-name=fesom2.6_INI
+#SBATCH --partition=cpu-clx:test  
+#SBATCH --ntasks=96
+#SBATCH --ntasks-per-node=96
+#SBATCH --time=01:00:00
+#SBATCH -o slurm-out.out
+#SBATCH -e slurm-err.out
+#SBATCH --account=hbk00099 
+
+## modules HLRN/NHRZIB
+module purge
+module load slurm
+module load NHRZIBenv
+module load sw.clx.el9
+module load intel/2024.2
+module load impi/2021.13
+module load cdo 
+module load nco 
+module load hdf5-parallel/impi/intel/1.14.4
+module load netcdf-parallel/impi/intel/4.9.2
+
+export PSM2_MULTI_EP=0
+
+set -x
+
+ulimit -s unlimited
+
+# determine JOBID
+JOBID=`echo $SLURM_JOB_ID |cut -d"." -f1`
+
+ln -s ../bin/fesom_ini.x
+cp -n ../config/namelist.config  .
+
+
+date
+srun --mpi=pmi2 ./fesom_ini.x > "fesom2.6.ini.out"
+date
